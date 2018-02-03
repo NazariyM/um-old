@@ -1,0 +1,76 @@
+.footer
+  background-color: #2a363d
+  color: #9f9f9f
+  &__container
+    padding: 33px 15px 40px
+  &__logo
+    margin-bottom: 25px
+    .logo__icon
+      margin-right: 4px
+    p
+      +f('os-600', 16)
+    p, span
+      color: #fff
+  &__row
+    display: flex
+    margin: 0 -14px
+  &__col
+    position: relative
+    flex: 1 0 calc(33.33333% - 28px)
+    margin: 0 14px
+    border-right: 1px solid #3b4b55
+    &::before, &::after
+      position: absolute
+      top: 4px
+      left: 100%
+      z-index: 1
+      width: 1px
+      height: 37px
+      background: #fff
+      content: ''
+    &::before
+      top: 4px
+    &::after
+      top: auto
+      bottom: 0
+    &:nth-child(3)
+      border-right: 0
+      background: url("../img/bg/pointer.svg") no-repeat
+      &::after, &::before
+        display: none
+  &__article
+    margin-bottom: 22px
+  &__title
+    margin-bottom: 25px
+  &__bottom
+    box-shadow: 0 -1px 0 #3b4b55
+    background-color: #252f35
+    &-container
+      display: flex
+      justify-content: space-between
+      padding: 22px 15px
+      line-height: 1
+  &__list
+    a
+      +trs
+      .no-touch &:hover
+        color: $blue
+  &__subscr
+    margin-top: 20px
+  &__lang .lang__list
+    transform: rotate(180deg)
+    
+.subscr
+  &__title
+    margin-bottom: 30px
+  &__field
+    display: flex
+  &__input
+    height: 37px
+    background-color: #ffffff
+    border: 0
+  &__submit
+    height: 37px
+    width: 117px
+    flex: 0 0 117px
+    padding: 0 10px

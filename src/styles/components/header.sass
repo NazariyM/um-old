@@ -4,11 +4,10 @@
     display: flex
     justify-content: flex-end
     align-items: center
-    height: 70px
-    padding: 15px
-  &__lang
+    padding: 15px 15px 13px
+  &__logo
   &__bottom
-    padding: 15px 0
+    padding: 20px 0
     box-shadow: 0 -1px 0 #dee2ef
     &-container
       display: flex
@@ -25,16 +24,29 @@
 
 .lang
   position: relative
+  display: flex
+  align-items: center
   &__list
+    position: relative
+    +trs
+    &.is-active
     .icon
       width: 24px
       height: 18px
     &-items
       display: none
       position: absolute
+      left: -8px
+      width: 100%
       top: 100%
       z-index: 1
+      padding: 9px 5px
+      background: #fff
+      box-shadow: 0 5px 10px 1px rgba(8, 34, 53, 0.8)
+      text-align: center
       li
+        height: 24px
+        font-size: 0
         &:not(:last-child)
           margin-bottom: 5px
     &.is-active .lang__link::after
@@ -51,19 +63,42 @@
       +arr(7, 4, #747474, b)
       content: ''
       +trs
+  &__translate
+    width: 173px
+    margin-right: 13px
+    border: 1px solid #dee2ef
+    .goog-te-gadget-simple
+      padding: 5px 7px
+      border: 0
+    .goog-te-gadget-icon
+      width: 18px
+    .goog-te-gadget-simple .goog-te-menu-value span:nth-child(3)
+      display: none
+    .goog-te-gadget-simple .goog-te-menu-value span[aria-hidden]
+      font-size: 8px
+      position: relative
+      top: -3px
+    .goog-te-gadget-simple .goog-te-menu-value span
+      color: #747474
+      +f('os-400', 16)
       
 .logo
   display: flex
   align-items: center
+  .no-touch &:hover p,
+  .no-touch &:hover span
+    color: $blue
   &__icon
     margin-right: 13px
   p
     color: #000
     +f('os-700', 20)
     text-transform: uppercase
+    +trs
   span
     text-transform: none
     +f('os-400', 15)
+    +trs
     
 .nav
   &__list
@@ -71,10 +106,10 @@
     li
       position: relative
       &:not(:last-child)
-        margin-right: 15px
+        margin-right: 16px
       &::after
         position: absolute
-        top: -15px
+        top: -20px
         left: 0
         z-index: 1
         width: 100%
@@ -87,3 +122,6 @@
         color: $blue
     a
       color: #747474
+      +trs
+      .no-touch &:hover
+        color: $blue

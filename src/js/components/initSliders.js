@@ -45,7 +45,7 @@ export function initSliders() {
   //   ]
   // }));
 
-  const $chartSld = $('.js-chart');
+  const $chartSld = $('.js-chart-slider');
   const $chartNav = $('.js-chart-nav');
 
   $chartSld.on('init', function(event, slick) {

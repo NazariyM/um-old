@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="7"
+     viewBox="0 0 10 7">
+    <defs>
+        <path id="hrmia"
+              d="M505.72 1614.1a.35.35 0 0 0-.5.5l2.55 2.54h-8.41c-.2 0-.36.15-.36.35 0 .2.16.35.36.35h8.41l-2.55 2.53a.36.36 0 0 0 0 .5c.14.14.36.14.5 0l3.16-3.13a.35.35 0 0 0 0-.5z"/>
+    </defs>
+    <g>
+        <g transform="translate(-499 -1614)">
+            <use fill="#00a8f8" xlink:href="#hrmia"/>
+        </g>
+    </g>
+</svg>

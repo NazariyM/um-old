@@ -3,35 +3,41 @@ import { $document } from '../modules/dev/_helpers';
 export default class LangList {
   constructor() {
     this.$langList = $('.js-lang-list');
-    this.$langSub = this.$langList.find('.lang__list-items');
 
     if (this.$langList.length) this.switch();
   }
 
   switch() {
-    const _this = this;
+    this.$langList.each(function () {
+      const $this = $(this);
+      const $langSub = $this.find('.lang__list-items');
 
-    _this.$langList.find('.is-active > a').on('click', function (e) {
-      e.preventDefault();
-    });
-    _this.$langList.on('click', function () {
-      $(this).toggleClass('is-active');
-      _this.$langSub.slideToggle({
-        duration: 300,
-        easing: 'swing'
-      });
-    });
+      $this.on('click', function (ev) {
+        const currentLink = ev.target.closest('.lang__link');
 
-    $document.on('click', function (e) {
-      if ($(e.target).closest(_this.$langList).length !== 0) {
+        if (currentLink) {
+          ev.preventDefault();
+        }
 
-      } else {
-        _this.$langSub.slideUp({
+        $(this).toggleClass('is-active');
+        $langSub.slideToggle({
           duration: 300,
           easing: 'swing'
         });
-        _this.$langList.removeClass('is-active');
-      }
+      });
+
+      $document.on('click', function (e) {
+        if ($(e.target).closest($this).length !== 0) {
+
+        } else {
+          $langSub.slideUp({
+            duration: 300,
+            easing: 'swing'
+          });
+          $this.removeClass('is-active');
+        }
+      });
     });
+
   }
 }

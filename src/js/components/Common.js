@@ -4,6 +4,7 @@ import LangList from './LangList';
 // import objectFitVideos from 'object-fit-videos';
 // import objectFitImages from 'object-fit-images';
 import { initSliders } from './initSliders';
+import { initCharts } from './initCharts';
 // import { initAccordion } from './initAccordion';
 // import Popup from 'vintage-popup';
 // import CTabs from './c-tabs';
@@ -20,6 +21,7 @@ export class Common {
     new LangList;
     // objectFitImages();
     initSliders();
+    initCharts();
     // initAccordion();
   }
 }

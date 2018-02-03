@@ -39,24 +39,27 @@ body
 		padding: 9px 27px
 		background-color: #0094f8
 		color: #fff
+
+.title-xs
+	+f('os-600', 16, 23)
+	text-transform: uppercase
+	color: #fff
 	
 //input.btn
 //	+trs
 //	.no-touch &:hover
 //		box-shadow: 0 0 10px rgba($black, .4)
 
-//.input
-//	width: 100%
-//	height: 62px
-//	padding: 0 20px
-//	border-radius: 28px
-//	border: 0
-//	+f('geo-400', 17)
-//	color: $black
-//	+placeholder-color(#8d8d8d)
-//	+sm
-//		height: 50px
-//
+.input
+	width: 100%
+	height: 43px
+	padding: 0 14px
+	+f('os-400', 14)
+	color: $black
+	border: 1px solid #d1d1d1
+	background-color: #fafafa
+	+placeholder-color(#acacac)
+	
 //.check-box
 //	position: relative
 //	label
@@ -177,6 +180,9 @@ body
 	border: 8px solid #fff
 	border-radius: 50%
 	background: #dff0fe
+	+trs
+	.no-touch &:hover
+		background: darken(#dff0fe, 15)
 	&::after
 		position: absolute
 		z-index: -1
@@ -200,3 +206,15 @@ body
 			background: #fff
 			border-radius: 50%
 			z-index: 1
+			
+.arrow-link
+	color: $blue
+	line-height: 1
+	.no-touch &:hover .arrow-link__icon
+		transform: translateX(5px)
+	span
+		margin-right: 7px
+	&__icon
+		vertical-align: 1px
+		transition: .3s ease
+		
