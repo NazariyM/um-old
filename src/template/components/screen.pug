@@ -1,0 +1,43 @@
+if screen ? screen : screen = []
+if screen.title ? screen.title : screen.title = 'Market research and risk management with the Power of Deep Learning'
+if screen.descr ? screen.descr : screen.descr = 'Take advantage of our platform, a new system to control your research workflow and easily earn money just with a few minutes of time'
+
+//begin screen
++b.SECTION.screen(class= screen.classMod ? screen.classMod : '')
+	+e.container.container
+		+e.inner
+			+e.text
+				+e.H2.title= screen.title
+
+				+e.P.descr= screen.descr
+
+				+e.A.access-btn.btn._transp(href='#!') Получить доступ
+
+			+e.action
+				+e.A.action-btn(href='#!')
+					svg(class='screen__action-icon' xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='76', height='70', viewbox='0 0 76 70')
+						defs
+							path#4d25a(d='M1288.84 365.79v-69.11h31.84v17.28h-17.37v34.55h17.37v17.28zm23.15-46.08h11.58v5.76h-5.79V337h5.79v5.76h-11.58zm11.58 8.64h5.79v5.76h-5.79zm5.79-8.64h11.58v23.04h-11.58v-5.76h5.79v-11.52h-5.8zm2.9-23.03h31.83v69.1h-31.84v-17.27h17.37v-34.55h-17.37z')
+						g
+							g(opacity='.63', transform='translate(-1288 -296)')
+								use(fill='#000414', xlink:href='#4d25a')
+
+				+e.action-tooltip
+					+e.P Нажимай и повышай
+					svg.screen__action-tooltip-icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='212', height='94', viewbox='0 0 212 94')
+						defs
+							path#ox2ea(d='M1416 220v-1h71v1z')
+							path#ox2eb(d='M1416 174v-1h194v1z')
+							path#ox2ec(d='M1406.36 259.35l-.72-.7 39-40 .72.7z')
+							path#ox2ed(d='M1407.5 248a9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0-19z')
+						g
+							g(transform='translate(-1398 -173)')
+								use(fill='#dee2ef', xlink:href='#ox2ea')
+							g(transform='translate(-1398 -173)')
+								use(fill='#dee2ef', xlink:href='#ox2eb')
+							g(transform='translate(-1398 -173)')
+								use(fill='#dee2ef', xlink:href='#ox2ec')
+							g(transform='translate(-1398 -173)')
+								use(fill='#0094f8', xlink:href='#ox2ed')
+
+	+e.bg(style='background-image: url(static/img/bg/screen_bg.jpg)')

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="212" height="94"
+     viewBox="0 0 212 94">
+    <defs>
+        <path id="ox2ea" d="M1416 220v-1h71v1z"/>
+        <path id="ox2eb" d="M1416 174v-1h194v1z"/>
+        <path id="ox2ec" d="M1406.36 259.35l-.72-.7 39-40 .72.7z"/>
+        <path id="ox2ed" d="M1407.5 248a9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0-19z"/>
+    </defs>
+    <g>
+        <g transform="translate(-1398 -173)">
+            <use fill="#dee2ef" xlink:href="#ox2ea"/>
+        </g>
+        <g transform="translate(-1398 -173)">
+            <use fill="#dee2ef" xlink:href="#ox2eb"/>
+        </g>
+        <g transform="translate(-1398 -173)">
+            <use fill="#dee2ef" xlink:href="#ox2ec"/>
+        </g>
+        <g transform="translate(-1398 -173)">
+            <use fill="#0094f8" xlink:href="#ox2ed"/>
+        </g>
+    </g>
+</svg>

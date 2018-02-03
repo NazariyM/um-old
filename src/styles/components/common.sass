@@ -1,0 +1,202 @@
+// basic styles
+body
+	min-width: 320px
+	+f('os-400', 16, 24)
+	color: $gray
+	//&.is-locked
+	//	position: fixed
+	//	top: 0
+	//	left: 0
+	//	right: 0
+	//	height: 0
+	//	overflow: hidden
+	
+.out
+	overflow: hidden
+
+.container
+	max-width: 1170px
+	margin: 0 auto
+	padding: 0 15px
+	+xs
+		padding: 0 10px
+		
+// titles
+
+// buttons
+.btn
+	display: inline-block
+	vertical-align: top
+	border: 1px solid #0094f8
+	+f('os-400', 16, 23)
+	text-align: center
+	+trs
+	&_transp
+		padding: 8px 22px
+		background: transparent
+		color: $blue
+	&_blue
+		padding: 9px 27px
+		background-color: #0094f8
+		color: #fff
+	
+//input.btn
+//	+trs
+//	.no-touch &:hover
+//		box-shadow: 0 0 10px rgba($black, .4)
+
+//.input
+//	width: 100%
+//	height: 62px
+//	padding: 0 20px
+//	border-radius: 28px
+//	border: 0
+//	+f('geo-400', 17)
+//	color: $black
+//	+placeholder-color(#8d8d8d)
+//	+sm
+//		height: 50px
+//
+//.check-box
+//	position: relative
+//	label
+//		display: flex
+//		align-items: center
+//		+f('geo-500')
+//		font-size: 14px
+//		color: $black
+//		cursor: pointer
+//	&__square
+//		position: relative
+//		width: 20px
+//		height: 20px
+//		flex: 0 0 20px
+//		margin-right: 8px
+//		border: 2px solid #d7d7d7
+//		background: $white
+//		font-size: 0
+//		.icon
+//			opacity: 0
+//			transform: scale(.6)
+//			position: absolute
+//			top: -4px
+//			right: -8px
+//			font-size: 19px
+//			transition: .15s ease-in
+//	span
+//		user-select: none
+//
+//	input
+//		display: none
+//		&:checked + label .icon-check
+//			opacity: 1
+//			transform: scale(1)
+//	&_more
+//		text-align: left
+//		label
+//			align-items: flex-start
+//		span
+//			margin-top: 0
+//			line-height: 17px
+//	&_more &__square
+//		margin-top: 5px
+//		margin-right: 15px
+		
+//.textarea
+//	display: block
+//	width: 100%
+//	height: 100px
+//	min-height: 167px
+//	padding: 20px
+//	border: 0
+//	resize: none
+//	+f('geo-400', 17)
+//	+placeholder-color(#8d8d8d)
+//	+xs
+//		padding: 15px
+
+//.slider-btn
+//	position: absolute
+//	top: 50%
+//	font-size: 0
+//	z-index: 1
+//	.no-touch &:hover .icon
+//		fill: $white
+//	.no-touch &:active .icon
+//		transform: scale(.8)
+//	.icon
+//		font-size: 75px
+//		fill: rgba($white, .7)
+//		+trs
+//		+lg
+//			font-size: 55px
+//	&_prev
+//		left: 4%
+//	&_next
+//		right: 4%
+//
+//.slider-dots
+//	position: absolute
+//	left: 0
+//	right: 0
+//	bottom: 55px
+//	z-index: 1
+//	text-align: center
+//	font-size: 0
+//	li
+//		display: inline-block
+//		width: 20px
+//		height: 20px
+//		background: rgba($white, .5)
+//		border-radius: 50%
+//		cursor: pointer
+//		transition: transform .3s ease
+//		&:not(:first-child)
+//			margin-left: 15px
+//		&.slick-active
+//			background: #207bd2
+//			transform: scale(1.5)
+//		button
+//			+hide-text
+
+//h1, h2, h3, h4, h5, h6, p, a, span, div, img, mark, ul, li
+//	&::selection
+//		color: $white
+//		background-color: #f16eaa
+//
+//+selection
+//	color: $white
+//	background-color: #f16eaa
+
+.support-btn
+	position: fixed
+	right: 48px
+	bottom: 60px
+	width: 100px
+	height: 100px
+	border: 8px solid #fff
+	border-radius: 50%
+	background: #dff0fe
+	&::after
+		position: absolute
+		z-index: -1
+		top: -8px
+		left: -8px
+		right: -8px
+		bottom: -8px
+		border: 1px solid rgba(#0094f8, .32)
+		border-radius: 50%
+		content: ''
+	&__dots
+		position: absolute
+		top: 54%
+		left: 40px
+		display: flex
+		justify-content: space-between
+		width: 17px
+		&-circle
+			width: 3px
+			height: 3px
+			background: #fff
+			border-radius: 50%
+			z-index: 1

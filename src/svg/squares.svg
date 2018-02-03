@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="70"
+     viewBox="0 0 76 70">
+    <defs>
+        <path id="4d25a"
+              d="M1288.84 365.79v-69.11h31.84v17.28h-17.37v34.55h17.37v17.28zm23.15-46.08h11.58v5.76h-5.79V337h5.79v5.76h-11.58zm11.58 8.64h5.79v5.76h-5.79zm5.79-8.64h11.58v23.04h-11.58v-5.76h5.79v-11.52h-5.8zm2.9-23.03h31.83v69.1h-31.84v-17.27h17.37v-34.55h-17.37z"/>
+    </defs>
+    <g>
+        <g opacity=".63" transform="translate(-1288 -296)">
+            <use fill="#000414" xlink:href="#4d25a"/>
+        </g>
+    </g>
+</svg>
