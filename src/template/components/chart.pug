@@ -3,14 +3,9 @@ if chart ? chart : chart = []
 //begin chart
 +b.chart(class= chart.classMod ? chart.classMod : '')
   +e.inner
-    +e.slider.js-chart-slider
-      +e.slider-item
-        .js-chart
-      +e.slider-item
-        .js-chart
-      +e.slider-item
-        .js-chart
-    +e.nav.js-chart-nav(style='background-image: url(static/img/bg/chart_bg.jpg)')
+    +e.block
+      .js-chart
+    +e.nav.js-chart-slider(style='background-image: url(static/img/bg/chart_bg.jpg)')
       +e.nav-item
         p Оценочный метод выбора актива применяется согласно оригинальной авторской методике
       +e.nav-item

@@ -46,22 +46,12 @@ export function initSliders() {
   // }));
 
   const $chartSld = $('.js-chart-slider');
-  const $chartNav = $('.js-chart-nav');
 
   $chartSld.slick($.extend({}, defaultOptions, {
     arrows: false,
     speed: 500,
-    asNavFor: $chartNav,
-    autoplay: true,
-    autoplaySpeed: 3000
-  }));
-
-  $chartNav.slick($.extend({}, defaultOptions, {
-    arrows: false,
-    speed: 500,
     fade: true,
     dots: true,
-    asNavFor: $chartSld,
     dotsClass: 'chart__nav-dots'
   }));
 
@@ -118,6 +108,5 @@ export function initSliders() {
   const activeIndex = 1;
   if (activeIndex !== false) {
     $systemSld.slick('slickGoTo', activeIndex, false);
-    $chartSld.slick('slickGoTo', activeIndex, true);
   }
 }

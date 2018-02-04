@@ -3,6 +3,8 @@ body
 	min-width: 320px
 	+f('os-400', 16, 24)
 	color: $gray
+	-webkit-font-smoothing: subpixel-antialiased
+	-moz-osx-font-smoothing: grayscale
 	//&.is-locked
 	//	position: fixed
 	//	top: 0
@@ -186,7 +188,7 @@ body
 	height: 100px
 	border: 8px solid #fff
 	border-radius: 50%
-	background: #dff0fe
+	background: rgba($blue, .11)
 	+trs
 	.no-touch &:hover
 		background: darken(#dff0fe, 15)

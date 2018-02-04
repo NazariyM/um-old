@@ -71,12 +71,7 @@ if system ? system : system = []
 					+e.item
 						+e.A.item-img(href='http://static4.businessinsider.com/image/58f4f370f40dae1c008b4c85/28-hot-cars-at-the-2017-new-york-auto-show.jpg' data-fancybox="gallery")
 							+e.IMG(src='static/img/content/system_img.png' alt='image')
-							+e.SVG.item-img-icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='23', height='23', viewbox='0 0 23 23')
-								defs
-									path#pxmua(d='M957 654h1v11h11v1h-11v11h-1v-11h-11v-1h11z')
-								g
-									g(transform='translate(-946 -654)')
-										use(fill='#fff', xlink:href='#pxmua')
+							+e.item-img-icon
 
 						+e.tooltip
 							+e.tooltip-title Lorem Ipsum
