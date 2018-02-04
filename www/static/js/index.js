@@ -607,16 +607,12 @@ function initSliders() {
   var $chartSld = $('.js-chart-slider');
   var $chartNav = $('.js-chart-nav');
 
-  $chartSld.on('init', function (event, slick) {
-    setTimeout(function () {
-      $chartSld.slick('slickGoTo', 1, true);
-    }, 0);
-  });
-
   $chartSld.slick($.extend({}, defaultOptions, {
     arrows: false,
     speed: 500,
-    asNavFor: $chartNav
+    asNavFor: $chartNav,
+    autoplay: true,
+    autoplaySpeed: 3000
   }));
 
   $chartNav.slick($.extend({}, defaultOptions, {
@@ -654,6 +650,12 @@ function initSliders() {
       }
     }]
   });
+
+  var activeIndex = 1;
+  if (activeIndex !== false) {
+    $systemSld.slick('slickGoTo', activeIndex, false);
+    $chartSld.slick('slickGoTo', activeIndex, true);
+  }
 }
 
 /***/ }),
