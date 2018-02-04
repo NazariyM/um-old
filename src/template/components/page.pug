@@ -1,0 +1,6 @@
+if page ? page : page = []
+
+//begin page
++b.SECTION.page(class= page.classMod ? page.classMod : '' style='background-image: url(static/img/bg/page_bg.jpg)')
+	+e.container.container
+		+e.H1.title= page.title

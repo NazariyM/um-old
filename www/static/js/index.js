@@ -437,6 +437,17 @@ $('[data-fancybox]').fancybox();
 /** Export initialized common scripts by default */
 exports.default = Common.init();
 
+
+var $scheduleIcon = $('.schedule__item-icon');
+
+$scheduleIcon.on('mouseenter', function () {
+  $('body').addClass('is-shadow');
+});
+
+$scheduleIcon.on('mouseleave', function () {
+  $('body').removeClass('is-shadow');
+});
+
 /***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {

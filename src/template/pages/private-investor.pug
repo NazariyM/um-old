@@ -1,17 +1,16 @@
 extends ../extend/default
 
 block variables
-	-title = 'Institutional investors';
+	-title = 'Private investors';
 
 block main
 
 	-page = {title: 'Private investors'}
 	include ../components/page
 
+	-chart = {classMod: '_entry-page'}
 	include ../components/chart
 
-	include ../components/system
-
-	include ../components/tezis
+	include ../components/schedule
 
 	include ../components/support-btn

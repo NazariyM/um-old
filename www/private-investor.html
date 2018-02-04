@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institutional investors</title>
+    <title>Private investors</title>
     <link href="static/css/index.css" rel="stylesheet">
     <link rel="icon" href="static/favicon.ico">
   </head>
@@ -162,7 +162,7 @@
         </div>
       </section>
       <!--begin chart-->
-      <div class="chart">
+      <div class="chart chart_entry-page">
         <div class="chart__inner">
           <div class="chart__block">
             <div class="js-chart"></div>
@@ -185,340 +185,94 @@
           var perfDates = ["2017-01-03", "2017-01-04", "2017-01-05", "2017-01-06", "2017-01-09", "2017-01-10", "2017-01-11", "2017-01-12", "2017-01-13", "2017-01-16", "2017-01-17", "2017-01-18", "2017-01-19", "2017-01-20", "2017-01-23", "2017-01-24", "2017-01-25", "2017-01-26", "2017-01-27", "2017-01-30", "2017-01-31", "2017-02-01", "2017-02-02", "2017-02-03", "2017-02-06", "2017-02-07", "2017-02-08", "2017-02-09", "2017-02-10", "2017-02-13", "2017-02-14", "2017-02-15", "2017-02-16", "2017-02-17", "2017-02-21", "2017-02-22", "2017-02-23", "2017-02-24", "2017-02-27", "2017-02-28", "2017-03-01", "2017-03-02", "2017-03-03", "2017-03-06", "2017-03-07", "2017-03-08", "2017-03-09", "2017-03-10", "2017-03-13", "2017-03-14", "2017-03-15", "2017-03-16", "2017-03-17", "2017-03-20", "2017-03-21", "2017-03-22", "2017-03-23", "2017-03-24", "2017-03-27", "2017-03-28", "2017-03-29", "2017-03-30", "2017-03-31", "2017-04-03", "2017-04-04", "2017-04-05", "2017-04-06", "2017-04-07", "2017-04-10", "2017-04-11", "2017-04-12", "2017-04-13", "2017-04-17", "2017-04-18", "2017-04-19", "2017-04-20", "2017-04-21", "2017-04-24", "2017-04-25", "2017-04-26", "2017-04-27", "2017-04-28", "2017-05-01", "2017-05-02", "2017-05-03", "2017-05-04", "2017-05-05", "2017-05-08", "2017-05-09", "2017-05-10", "2017-05-11", "2017-05-12", "2017-05-15", "2017-05-16", "2017-05-17", "2017-05-18", "2017-05-22", "2017-05-23", "2017-05-24", "2017-05-25", "2017-05-26", "2017-05-30", "2017-05-31", "2017-06-01", "2017-06-02", "2017-06-05", "2017-06-06", "2017-06-07", "2017-06-08", "2017-06-09", "2017-06-12", "2017-06-13", "2017-06-14", "2017-06-15", "2017-06-16", "2017-06-19", "2017-06-20", "2017-06-21", "2017-06-22", "2017-06-23", "2017-06-26", "2017-06-27", "2017-06-28", "2017-06-29", "2017-06-30", "2017-07-03", "2017-07-05", "2017-07-06", "2017-07-07", "2017-07-10", "2017-07-11", "2017-07-12", "2017-07-13", "2017-07-14", "2017-07-17", "2017-07-18", "2017-07-19", "2017-07-20", "2017-07-21", "2017-07-24", "2017-07-25", "2017-07-26", "2017-07-27", "2017-07-28", "2017-07-31", "2017-08-01", "2017-08-02", "2017-08-03", "2017-08-04", "2017-08-07", "2017-08-08", "2017-08-09", "2017-08-10", "2017-08-11", "2017-08-14", "2017-08-15", "2017-08-16", "2017-08-17", "2017-08-18", "2017-08-21", "2017-08-22", "2017-08-23", "2017-08-24", "2017-08-25", "2017-08-28", "2017-08-29", "2017-08-30", "2017-08-31", "2017-09-01", "2017-09-04", "2017-09-05", "2017-09-06", "2017-09-07", "2017-09-08", "2017-09-11", "2017-09-12", "2017-09-13", "2017-09-14", "2017-09-15", "2017-09-18", "2017-09-19", "2017-09-20", "2017-09-21", "2017-09-22", "2017-09-25", "2017-09-26", "2017-09-27", "2017-09-28", "2017-09-29", "2017-10-02", "2017-10-03", "2017-10-04", "2017-10-05", "2017-10-06", "2017-10-09", "2017-10-10", "2017-10-11", "2017-10-12", "2017-10-13", "2017-10-16", "2017-10-17", "2017-10-18", "2017-10-19", "2017-10-20", "2017-10-23", "2017-10-24", "2017-10-25", "2017-10-26", "2017-10-27", "2017-10-30", "2017-10-31", "2017-11-01", "2017-11-02", "2017-11-03", "2017-11-06", "2017-11-07", "2017-11-08", "2017-11-09", "2017-11-10", "2017-11-13", "2017-11-14", "2017-11-15", "2017-11-16", "2017-11-17", "2017-11-20", "2017-11-21", "2017-11-22", "2017-11-23", "2017-11-24", "2017-11-27", "2017-11-28", "2017-11-29", "2017-11-30", "2017-12-01", "2017-12-04", "2017-12-05", "2017-12-06", "2017-12-07", "2017-12-08", "2017-12-11", "2017-12-12", "2017-12-13", "2017-12-14", "2017-12-15", "2017-12-18", "2017-12-19", "2017-12-20", "2017-12-21", "2017-12-22", "2017-12-26", "2017-12-27", "2017-12-28", "2017-12-29", "2018-01-02", "2018-01-03", "2018-01-04", "2018-01-05", "2018-01-08", "2018-01-09", "2018-01-10", "2018-01-11", "2018-01-12", "2018-01-16", "2018-01-17", "2018-01-18", "2018-01-19", "2018-01-22", "2018-01-23", "2018-01-24", "2018-01-25", "2018-01-26", "2018-01-29", "2018-01-30", "2018-01-31", "2018-02-01", "2018-02-02"];
         </script>
       </div>
-      <!--begin system-->
-      <section class="system">
-        <div class="system__container container">
-          <div class="system__item">
-            <h3 class="system__item-title"> Market data</h3>
-            <div class="system__item-img">
-              <img src="static/img/icons/market-data.png" alt="image" title="" />
-            </div>
-          </div>
-          <div class="system__item" data-popup-target="system-popup">
-            <h3 class="system__item-title"> Processing cloud</h3>
-            <h3 class="system__item-title"></h3>
-            <div class="system__item-img">
-              <img src="static/img/icons/processing-cloud.png" alt="image" title="" />
-            </div>
-          </div>
-          <div class="system__item">
-            <h3 class="system__item-title"> Portfolio</h3>
-            <div class="system__item-img">
-              <img src="static/img/icons/portfolio.svg" alt="image" title="" />
-            </div>
-          </div>
-          <div class="system__item">
-            <h3 class="system__item-title"> Internet</h3>
-            <div class="system__item-img">
-              <img src="static/img/icons/internet.svg" alt="image" title="" />
-            </div>
-          </div>
-          <svg class="system__arrows system__arrows_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="28" viewbox="0 0 41 28">
-            <defs>
-              <path id="t0vba" d="M759.26 900l-3.26 3.27L766.7 914 756 924.73l3.26 3.27 13.96-14z"></path>
-              <path id="t0vbb" d="M771.1 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27 13.96-14z"></path>
-              <path id="t0vbc" d="M783.04 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27L797 914z"></path>
-            </defs>
-            <g>
-              <g transform="translate(-756 -900)">
-                <g opacity=".15">
-                  <use xlink:href="#t0vba"></use>
-                </g>
-                <g opacity=".5">
-                  <use xlink:href="#t0vbb"></use>
-                </g>
-                <g>
-                  <use xlink:href="#t0vbc"></use>
-                </g>
-              </g>
-            </g>
-          </svg>
-          <svg class="system__arrows system__arrows_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="28" viewbox="0 0 41 28">
-            <defs>
-              <path id="t0vba" d="M759.26 900l-3.26 3.27L766.7 914 756 924.73l3.26 3.27 13.96-14z"></path>
-              <path id="t0vbb" d="M771.1 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27 13.96-14z"></path>
-              <path id="t0vbc" d="M783.04 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27L797 914z"></path>
-            </defs>
-            <g>
-              <g transform="translate(-756 -900)">
-                <g opacity=".15">
-                  <use xlink:href="#t0vba"></use>
-                </g>
-                <g opacity=".5">
-                  <use xlink:href="#t0vbb"></use>
-                </g>
-                <g>
-                  <use xlink:href="#t0vbc"></use>
-                </g>
-              </g>
-            </g>
-          </svg>
-          <svg class="system__arrows system__arrows_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="28" viewbox="0 0 41 28">
-            <defs>
-              <path id="t0vba" d="M759.26 900l-3.26 3.27L766.7 914 756 924.73l3.26 3.27 13.96-14z"></path>
-              <path id="t0vbb" d="M771.1 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27 13.96-14z"></path>
-              <path id="t0vbc" d="M783.04 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27L797 914z"></path>
-            </defs>
-            <g>
-              <g transform="translate(-756 -900)">
-                <g opacity=".15">
-                  <use xlink:href="#t0vba"></use>
-                </g>
-                <g opacity=".5">
-                  <use xlink:href="#t0vbb"></use>
-                </g>
-                <g>
-                  <use xlink:href="#t0vbc"></use>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </div>
-        <div class="popup" data-popup-id="system-popup" tabindex="-1" role="dialog">
-          <div class="popup__container popup__container_top">
-            <div class="system-slider js-system-slider">
-              <div class="system-slider__item">
-                <a class="system-slider__item-img" href="http://static4.businessinsider.com/image/58f4f370f40dae1c008b4c85/28-hot-cars-at-the-2017-new-york-auto-show.jpg" data-fancybox="gallery">
-                  <img src="static/img/content/system_img.png" alt="image" title="" />
-                  <div class="icon-plus"></div>
-                </a>
-                <div class="system-slider__tooltip">
-                  <div class="system-slider__tooltip-title">Lorem Ipsum</div>
-                  <p>это текст-"рыба", часто используемый</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89" height="49" viewbox="0 0 89 49">
-                    <defs>
-                      <path id="gxgva" d="M1034 512v-1h71v1z"></path>
-                      <path id="gxgvb" d="M1024.36 551.35l-.72-.7 39-40 .72.7z"></path>
-                      <path id="gxgvc" d="M1025.5 540a9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0-19z"></path>
-                    </defs>
-                    <g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgva"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgvb"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#0094f8" xlink:href="#gxgvc"></use>
-                      </g>
-                    </g>
-                  </svg>
+      <!--begin schedule-->
+      <section class="schedule">
+        <div class="schedule__container container">
+          <div class="schedule__inner">
+            <div class="schedule__row">
+              <div class="schedule__item">
+                <div class="schedule__item-icon">
+                  <div class="icon-plus icon-plus_sm"></div>
                 </div>
-              </div>
-              <div class="system-slider__item">
-                <a class="system-slider__item-img" href="http://static4.businessinsider.com/image/58f4f370f40dae1c008b4c85/28-hot-cars-at-the-2017-new-york-auto-show.jpg" data-fancybox="gallery">
-                  <img src="static/img/content/system_img.png" alt="image" title="" />
-                  <div class="icon-plus"></div>
-                </a>
-                <div class="system-slider__tooltip">
-                  <div class="system-slider__tooltip-title">Lorem Ipsum</div>
-                  <p>это текст-"рыба", часто используемый</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89" height="49" viewbox="0 0 89 49">
-                    <defs>
-                      <path id="gxgva" d="M1034 512v-1h71v1z"></path>
-                      <path id="gxgvb" d="M1024.36 551.35l-.72-.7 39-40 .72.7z"></path>
-                      <path id="gxgvc" d="M1025.5 540a9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0-19z"></path>
-                    </defs>
-                    <g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgva"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgvb"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#0094f8" xlink:href="#gxgvc"></use>
-                      </g>
-                    </g>
-                  </svg>
+                <div class="schedule__item-tooltip">
+                  <p>Ваши денежные средства будут под полным контролем, в то время как вы сами можете заниматься любыми другими делами, не тратя свое время на проведение торговых операций, на изучение ситуации на финансовом рынке, не размышляя над тем, как
+                    заработать на бирже, и не рискуя потерять значимую часть своего капитала после очередных торгов.</p>
                 </div>
-              </div>
-              <div class="system-slider__item">
-                <a class="system-slider__item-img" href="http://static4.businessinsider.com/image/58f4f370f40dae1c008b4c85/28-hot-cars-at-the-2017-new-york-auto-show.jpg" data-fancybox="gallery">
-                  <img src="static/img/content/system_img.png" alt="image" title="" />
-                  <div class="icon-plus"></div>
-                </a>
-                <div class="system-slider__tooltip">
-                  <div class="system-slider__tooltip-title">Lorem Ipsum</div>
-                  <p>это текст-"рыба", часто используемый</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89" height="49" viewbox="0 0 89 49">
-                    <defs>
-                      <path id="gxgva" d="M1034 512v-1h71v1z"></path>
-                      <path id="gxgvb" d="M1024.36 551.35l-.72-.7 39-40 .72.7z"></path>
-                      <path id="gxgvc" d="M1025.5 540a9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0-19z"></path>
-                    </defs>
-                    <g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgva"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgvb"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#0094f8" xlink:href="#gxgvc"></use>
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-              </div>
-              <div class="system-slider__item">
-                <a class="system-slider__item-img" href="http://static4.businessinsider.com/image/58f4f370f40dae1c008b4c85/28-hot-cars-at-the-2017-new-york-auto-show.jpg" data-fancybox="gallery">
-                  <img src="static/img/content/system_img.png" alt="image" title="" />
-                  <div class="icon-plus"></div>
-                </a>
-                <div class="system-slider__tooltip">
-                  <div class="system-slider__tooltip-title">Lorem Ipsum</div>
-                  <p>это текст-"рыба", часто используемый</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89" height="49" viewbox="0 0 89 49">
-                    <defs>
-                      <path id="gxgva" d="M1034 512v-1h71v1z"></path>
-                      <path id="gxgvb" d="M1024.36 551.35l-.72-.7 39-40 .72.7z"></path>
-                      <path id="gxgvc" d="M1025.5 540a9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0-19z"></path>
-                    </defs>
-                    <g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgva"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgvb"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#0094f8" xlink:href="#gxgvc"></use>
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-              </div>
-              <div class="system-slider__item">
-                <a class="system-slider__item-img" href="http://static4.businessinsider.com/image/58f4f370f40dae1c008b4c85/28-hot-cars-at-the-2017-new-york-auto-show.jpg" data-fancybox="gallery">
-                  <img src="static/img/content/system_img.png" alt="image" title="" />
-                  <div class="icon-plus"></div>
-                </a>
-                <div class="system-slider__tooltip">
-                  <div class="system-slider__tooltip-title">Lorem Ipsum</div>
-                  <p>это текст-"рыба", часто используемый</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89" height="49" viewbox="0 0 89 49">
-                    <defs>
-                      <path id="gxgva" d="M1034 512v-1h71v1z"></path>
-                      <path id="gxgvb" d="M1024.36 551.35l-.72-.7 39-40 .72.7z"></path>
-                      <path id="gxgvc" d="M1025.5 540a9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0-19z"></path>
-                    </defs>
-                    <g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgva"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgvb"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#0094f8" xlink:href="#gxgvc"></use>
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-              </div>
-              <div class="system-slider__item">
-                <a class="system-slider__item-img" href="http://static4.businessinsider.com/image/58f4f370f40dae1c008b4c85/28-hot-cars-at-the-2017-new-york-auto-show.jpg" data-fancybox="gallery">
-                  <img src="static/img/content/system_img.png" alt="image" title="" />
-                  <div class="icon-plus"></div>
-                </a>
-                <div class="system-slider__tooltip">
-                  <div class="system-slider__tooltip-title">Lorem Ipsum</div>
-                  <p>это текст-"рыба", часто используемый</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89" height="49" viewbox="0 0 89 49">
-                    <defs>
-                      <path id="gxgva" d="M1034 512v-1h71v1z"></path>
-                      <path id="gxgvb" d="M1024.36 551.35l-.72-.7 39-40 .72.7z"></path>
-                      <path id="gxgvc" d="M1025.5 540a9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0-19z"></path>
-                    </defs>
-                    <g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgva"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#dee2ef" xlink:href="#gxgvb"></use>
-                      </g>
-                      <g transform="translate(-1016 -510)">
-                        <use fill="#0094f8" xlink:href="#gxgvc"></use>
-                      </g>
-                    </g>
-                  </svg>
-                </div>
+                <p class="schedule__item-text">Вы экономите время, используя готовое решение</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!--begin tezis-->
-      <section class="tezis">
-        <div class="tezis__container container">
-          <div class="tezis__row">
-            <div class="tezis__item tezis__item_right">
-              <div class="tezis__item-text">
-                <p>Предлагаем уникальный синтетический индекс активов с максимальным потенциалом роста</p>
+            <div class="schedule__row">
+              <div class="schedule__item">
+                <div class="schedule__item-icon">
+                  <div class="icon-plus icon-plus_sm"></div>
+                </div>
+                <div class="schedule__item-tooltip">
+                  <p>Ваши денежные средства будут под полным контролем, в то время как вы сами можете заниматься любыми другими делами, не тратя свое время на проведение торговых операций, на изучение ситуации на финансовом рынке, не размышляя над тем, как
+                    заработать на бирже, и не рискуя потерять значимую часть своего капитала после очередных торгов.</p>
+                </div>
+                <p class="schedule__item-text">Цена доступа ниже рыночной, используйте шанс</p>
               </div>
-              <div class="tezis__item-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="22" viewbox="0 0 23 22">
+            </div>
+            <div class="schedule__row">
+              <div class="schedule__item">
+                <div class="schedule__item-icon">
+                  <div class="icon-plus icon-plus_sm"></div>
+                </div>
+                <div class="schedule__item-tooltip">
+                  <p>Ваши денежные средства будут под полным контролем, в то время как вы сами можете заниматься любыми другими делами, не тратя свое время на проведение торговых операций, на изучение ситуации на финансовом рынке, не размышляя над тем, как
+                    заработать на бирже, и не рискуя потерять значимую часть своего капитала после очередных торгов.</p>
+                </div>
+                <p class="schedule__item-text">Цена доступа ниже рыночной, используйте шанс</p>
+              </div>
+            </div>
+            <div class="schedule__row">
+              <div class="schedule__item">
+                <div class="schedule__item-icon">
+                  <div class="icon-plus icon-plus_sm"></div>
+                </div>
+                <div class="schedule__item-tooltip">
+                  <p>Ваши денежные средства будут под полным контролем, в то время как вы сами можете заниматься любыми другими делами, не тратя свое время на проведение торговых операций, на изучение ситуации на финансовом рынке, не размышляя над тем, как
+                    заработать на бирже, и не рискуя потерять значимую часть своего капитала после очередных торгов.</p>
+                </div>
+                <p class="schedule__item-text">Инвестируйте сами, с нашим инструментом это просто</p>
+              </div>
+            </div>
+            <div class="schedule__row">
+              <div class="schedule__item">
+                <div class="schedule__item-icon">
+                  <div class="icon-plus icon-plus_sm"></div>
+                </div>
+                <div class="schedule__item-tooltip">
+                  <p>Ваши денежные средства будут под полным контролем, в то время как вы сами можете заниматься любыми другими делами, не тратя свое время на проведение торговых операций, на изучение ситуации на финансовом рынке, не размышляя над тем, как
+                    заработать на бирже, и не рискуя потерять значимую часть своего капитала после очередных торгов.</p>
+                </div>
+                <p class="schedule__item-text">Проверенная технология анализарынков, приносящая 15+% годовых</p>
+              </div>
+            </div>
+            <div class="schedule__earn">
+              <a class="schedule__earn-btn btn btn_border" href="#!">
+                <span>Начать зарабатывать</span>
+              </a>
+              <div class="schedule__earn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="62" viewbox="0 0 46 62">
                   <defs>
-                    <path id="lyqna" d="M1489.36 1655.32a2.7 2.7 0 0 1-2.68 2.68 2.7 2.7 0 0 1-2.68-2.68 2.7 2.7 0 0 1 3.14-2.63l2.75-5.4a2.04 2.04 0 0 1 1.42-3.5c1.12 0 2.05.92 2.05 2.04 0 .46-.16.89-.42 1.23l3.5 4.53a2.02 2.02 0 0 1 .31-.01l1.33-5.44a2.05 2.05 0 0 1-1.02-1.77 2.06 2.06 0 0 1 3-1.8l3.25-3.32c-.25-.34-.4-.76-.4-1.2 0-1.13.92-2.05 2.04-2.05s2.05.92 2.05 2.04a2.06 2.06 0 0 1-2.94 1.84l-3.28 3.33c.24.33.37.73.37 1.16a2.06 2.06 0 0 1-2.13 2.04l-1.33 5.44a2.05 2.05 0 0 1 1.03 1.77c0 1.12-.93 2.04-2.05 2.04a2.06 2.06 0 0 1-2.05-2.04c0-.69.35-1.3.88-1.67l-3.32-4.27a2.02 2.02 0 0 1-1.45.11l-2.67 5.25a2.7 2.7 0 0 1 1.3 2.28zm-.97 0c0-.92-.78-1.7-1.71-1.7-.93 0-1.7.78-1.7 1.7 0 .93.77 1.7 1.7 1.7.93 0 1.7-.77 1.7-1.7zm4-9.49c0-.58-.5-1.07-1.08-1.07-.59 0-1.07.49-1.07 1.07 0 .59.48 1.07 1.07 1.07.58 0 1.07-.48 1.07-1.07zm5.35 7.79c0-.58-.49-1.07-1.07-1.07-.59 0-1.07.49-1.07 1.07 0 .58.48 1.07 1.07 1.07.58 0 1.07-.49 1.07-1.07zm2.44-9.25c0-.58-.49-1.07-1.07-1.07-.59 0-1.08.49-1.08 1.07 0 .59.5 1.07 1.08 1.07.58 0 1.07-.48 1.07-1.07zm5.85-6.33c0-.58-.5-1.07-1.08-1.07-.58 0-1.07.49-1.07 1.07 0 .59.49 1.08 1.07 1.08.59 0 1.08-.5 1.08-1.08z"></path>
+                    <path id="lj4xa" d="M1357.12 1616.79a12.7 12.7 0 0 1 12.66-12.79c7 0 12.65 5.7 12.65 12.79 0 2.76-.78 5.31-2.34 7.48-.78-.2-1.36-.4-2.14-.4a10.68 10.68 0 0 0 2.53-6.88c0-5.9-4.86-10.83-10.7-10.83-5.84 0-10.7 4.92-10.7 10.83 0 3.34 1.55 6.3 3.88 8.26v2.36a13.03 13.03 0 0 1-5.84-10.82zm19.47 5.51v-5.51a6.93 6.93 0 0 0-6.81-6.89 6.93 6.93 0 0 0-6.82 6.89v5.51a8.59 8.59 0 0 1-1.94-5.51c0-4.92 3.89-8.85 8.76-8.85a8.77 8.77 0 0 1 8.76 8.85c0 2.16-.78 4.13-1.95 5.51zm21.41 14.17v11.8c0 9.25-7.4 16.73-16.54 16.73-6.23 0-12.46-2.95-16.94-11.02-6.23-11.6-14.4-19.28-10.51-23.22 2.72-2.75 7 0 10.9 3.54v-17.51a4.85 4.85 0 0 1 4.87-4.92 4.85 4.85 0 0 1 4.86 4.92v9.84a4.8 4.8 0 0 1 7.4 2.16 5.25 5.25 0 0 1 3.3-1.18 4.85 4.85 0 0 1 4.87 4.92 4.85 4.85 0 0 1 7.79 3.94zm-1.95 0a3.01 3.01 0 0 0-2.92-2.95 3.01 3.01 0 0 0-2.92 2.95v.98h-1.94v-4.92a3.01 3.01 0 0 0-2.92-2.95 3.01 3.01 0 0 0-2.92 2.95v2.95h-1.95v-4.92a3.01 3.01 0 0 0-2.92-2.95 3.01 3.01 0 0 0-2.92 2.95v6.9h-1.94v-20.67a3.01 3.01 0 0 0-2.92-2.95 3.01 3.01 0 0 0-2.92 2.95v22.24c-4.1-4.33-9.35-9.06-11.49-6.9-2.14 2.17 3.31 8.08 10.9 21.06 3.5 5.71 7.79 9.84 15.18 9.84 7.99 0 14.6-7.08 14.6-14.76z"></path>
                   </defs>
                   <g>
-                    <g opacity=".94" transform="translate(-1484 -1636)">
-                      <use xlink:href="#lyqna"></use>
+                    <g transform="translate(-1353 -1604)">
+                      <g>
+                        <image width="46" height="55" transform="translate(1353 1611)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAA3CAYAAABzYHhkAAAGlElEQVRoQ82aeaxdUxTGf8s8z/M8xDzHEILEmPAHUSKUEKSGiJk0xExiHkNQU6iooYaGxJRGq2KqRMxj2lIVqlRLqbbY8qt9mvuue+479/YeupKT+96755z97bXX/ta31n5Bl5ZSCmBRYBEgAX94RYQ/124O3rGllBYH1gQ2zZ+C/hr4ApgSEf5eq3UMPIPeBjgY2BNYC/gT+BJ4CXgOGF83+I6A5/DYGDgZOApYA1gou/av7PE7gMcj4rs6Xd4pcEPkIOBCYDug+XnB6/FrgLfq9HqnwJcFTgfOBFYr8ehHwBXAMxHxe11e7xT4csC5GfjyJaA+Ay4DRixIwJcAjgGuAlYpAf4GcBHwakTMWVA87kbcGXgA2LwFKNllBHA+MK5OTu8oVASaUloHeDhTYfPzevg24MqImFaXt31vN8BXz8D3bqDCAuMsYDAwJCL8uTbrBrgJ5zFg9xYT/w04Nm9Mw6Y26wb42sBTwC4tUP0oz0eEG7RW6wb4usCzOQE1g5sMHA2MigiTUW3WDfANgReBTUpY5QmTVERMqQ11l5tTRfgyYMi0shlZFrwCLJwv75vTy1XoxuNbAKPbpHxD5BzgySx71wfctB9mbu+JDOgW+Jg2mdNC4nbgV+AIYNUMfBRwC/B2RPyZUloMWAbwU/53pWZXTVrdAN8aMAxWKgkVgavLdwUa9Yyevhu4GFgB2BfYK+t598MLXhHxfZW9MQ94SskybGVgxfzgVGBacyJJKe2UY1yl2MoMFYuKjVp8+R5wGnAcMCBPTAw+MyHL4WFVxNlc4CklPaMHTgCsbrT3gaezvp5cLGFKaZ9Mh0uVAJ+dQ0OvNpvlnTnAcZonbrn3PDCoitcje3o34HJgj1z8OqBe+CFnSfXHuIziMGAooFJsZdMzWymBm20m8C0gpTaHqSH2OXBgRExoKMbdA5oTcw/MzQ8CF8ChwHUlFGdsGrNXAh8DhwN3tQHu4Iad4MpCqSj3mr83xJTNCjQLlQ0ARZ33G0pjcz07q/D4fsDNwGYlg7nrXwcuAXYArgUs41qZkldvWpM6gU7MfTUpg146P++7XA0nY+jKWJ8K3C92BO4E3Hhl5lLJ37YgBpWAMr4FbEg4QJnXy8YoejJlbCf7yEpDBe4ybA8Ma+PxYiCB6ZGyGH0nV0d2As7Iodcx5bZxnuPfCFxdeFzq0uP7V1hXN0erGDU7Gt8mFSnVq/E+n3Ml3FP+vZsJqfEN19sLOlwyL/ENDdxazMHlqzKIm1htUhbXso0spbosmKKdn1qN+xNwJDCyMQG5i12GgQ3CqMICVL7FPeLEqjjBlzYD93d1/sCImNgIvNikcrRCakEz4/tS4NaImNln9ln4HALc1Ea2/l8TklHMIbY9/vrXsqWUzHhSmrOzN7ggmGGiBBlgVhVQy3hLKckIJwLnZVnaCL4/rq1joo5pDjG+LQ/LN0pKyTaEHamTmljATabWLmvB1QHcd75mPRsRX7UFPndbp2R6fzTXl8XqOHtbyIZRVYboxWRUlscDY2zttR04y1253QekssJ+zommTCz1AmjzO0xeKth7ImJqf8A933EnW7mYEQtTdPndf+lxV1pVer2FSr8Dp5S2BIYDfhZWNZv22vMqz6sVelWAW8nI67bWGsPlvwYvKQyxvIuISVWAqz0U91boZXVmrz3b6n3qHIuZ+yNiRr/AM7tY2d+Xe+OVnunxTFzdN/NpyFjbG5VApJQsjE/NkvL/8LqMYmmpTlEhVmeFlJJy1IctljstyRxLJpI+3Sd60Ksqnerts6055xXLVZc0l3gen7irD8jZtNKK5TGKY3N/FXxV0Hrbcs3YnuvtjjyeY93BbHraG/Rk2QOsRqap6oeq9znZkXm8T4ztroBn8HrZdO9RihRph6Au8FZNnqkOjwhLw3nWyVL38VI+07c/eG9ut1Vd+qre1rse2QyOiG+aH+oaePa+jU8PbM8CylpyVYE23lfob0NydKu++vwC18tbARfkblhZk6gT8IKeCCjuHooIw+VfNl/As9elxm2z1xVk8wPeFoZ6WzH1iD2csn75fAPP4FWK6+UOwSldNIL0srT3AfCg/8Cg5m9kkZ7GePPLUkpKXzsEJimLbjte7XooCifZwu6Y50oev7wLTO/vZKInHi+ZgJlWjaMclj4t9SzEi6OTX3Il5b+JCHZ8PkiodLBbC/BiIrn3LlDbbnbL/PQSnKFhJWX9Wvnsp+sE1Ak99OG3f7rCfay/cGg31t+pJ/9YjGVQNwAAAABJRU5ErkJggg=="></image>
+                      </g>
+                      <g>
+                        <use fill="#0094f8" xlink:href="#lj4xa"></use>
+                      </g>
                     </g>
                   </g>
                 </svg>
               </div>
             </div>
           </div>
-          <div class="tezis__row">
-            <div class="tezis__item tezis__item_center">
-              <div class="tezis__item-text">
-                <p>Доступ к источнику данных для подключения торговых роботов с предоставлением сигналов на вход в сделку и точек фиксации прибыли</p>
-              </div>
-              <div class="tezis__item-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewbox="0 0 22 22">
-                  <defs>
-                    <path id="42nna" d="M1219.5 1778.92c0 .92-.74 1.67-1.65 1.67-.91 0-1.65-.75-1.65-1.67 0-.93.74-1.68 1.65-1.68.91 0 1.65.75 1.65 1.68zm-.73 0a.93.93 0 0 0-.92-.94c-.5 0-.92.42-.92.94 0 .51.41.93.92.93.5 0 .92-.42.92-.93zm13.56-.94c.2 0 .37.17.37.38 0 .2-.16.37-.37.37a.37.37 0 0 1-.36-.37c0-.21.16-.38.36-.38zm-1.46 0c.2 0 .36.17.36.38 0 .2-.16.37-.36.37a.37.37 0 0 1-.37-.37c0-.21.16-.38.37-.38zm2.2 1.12c.2 0 .36.17.36.37 0 .21-.16.38-.36.38a.37.37 0 0 1-.37-.38c0-.2.16-.37.37-.37zm-1.47 0c.2 0 .37.17.37.37 0 .21-.17.38-.37.38a.37.37 0 0 1-.37-.38c0-.2.17-.37.37-.37zm-2.2-1.12c.2 0 .37.17.37.38 0 .2-.17.37-.37.37a.37.37 0 0 1-.37-.37c0-.21.17-.38.37-.38zm.73 1.12c.2 0 .37.17.37.37 0 .21-.16.38-.37.38a.37.37 0 0 1-.36-.38c0-.2.16-.37.36-.37zm-2.2-1.12c.2 0 .37.17.37.38 0 .2-.16.37-.37.37a.37.37 0 0 1-.36-.37c0-.21.16-.38.36-.38zm.74 1.12c.2 0 .36.17.36.37 0 .21-.16.38-.36.38a.37.37 0 0 1-.37-.38c0-.2.16-.37.37-.37zm-2.2-1.12c.2 0 .36.17.36.38 0 .2-.16.37-.36.37a.37.37 0 0 1-.37-.37c0-.21.16-.38.37-.38zm.73 1.12c.2 0 .37.17.37.37 0 .21-.17.38-.37.38a.37.37 0 0 1-.37-.38c0-.2.17-.37.37-.37zm8.15 3.36c.4.31.65.8.65 1.34v4.4c0 .54-.26 1.03-.65 1.34.4.32.65.8.65 1.35v4.4a1.7 1.7 0 0 1-1.69 1.71h-18.62a1.7 1.7 0 0 1-1.69-1.72v-4.4c0-.54.26-1.02.65-1.34-.4-.31-.65-.8-.65-1.34v-4.4c0-.54.26-1.03.65-1.34-.4-.32-.65-.8-.65-1.35v-4.4c0-.94.76-1.71 1.69-1.71h18.62c.93 0 1.69.77 1.69 1.72v4.4c0 .54-.26 1.02-.65 1.34zm-1.04 7.46h-18.62a.97.97 0 0 0-.96.97v4.4c0 .53.43.96.96.96h18.62c.53 0 .96-.43.96-.97v-4.4a.97.97 0 0 0-.96-.96zm0-7.09h-18.62a.97.97 0 0 0-.96.97v4.4c0 .53.43.97.96.97h18.62c.53 0 .96-.44.96-.97v-4.4a.97.97 0 0 0-.96-.97zm-18.62-.75h18.62c.53 0 .96-.43.96-.97v-4.4a.97.97 0 0 0-.96-.96h-18.62a.97.97 0 0 0-.96.97v4.4c0 .53.43.96.96.96zm.51 3.92c0-.93.74-1.68 1.65-1.68.91 0 1.65.75 1.65 1.68 0 .93-.74 1.68-1.65 1.68-.91 0-1.65-.75-1.65-1.68zm.73 0c0 .51.41.93.92.93.5 0 .92-.42.92-.93a.93.93 0 0 0-.92-.93c-.5 0-.92.42-.92.93zm15.4-.93c.2 0 .37.16.37.37 0 .2-.16.37-.37.37a.37.37 0 0 1-.36-.37c0-.2.16-.37.36-.37zm-1.46 0c.2 0 .36.16.36.37 0 .2-.16.37-.36.37a.37.37 0 0 1-.37-.37c0-.2.16-.37.37-.37zm2.2 1.12c.2 0 .36.16.36.37 0 .2-.16.37-.36.37a.37.37 0 0 1-.37-.37c0-.2.16-.37.37-.37zm-1.47 0c.2 0 .37.16.37.37 0 .2-.17.37-.37.37a.37.37 0 0 1-.37-.37c0-.2.17-.37.37-.37zm-2.2-1.12c.2 0 .37.16.37.37 0 .2-.17.37-.37.37a.37.37 0 0 1-.37-.37c0-.2.17-.37.37-.37zm.73 1.12c.2 0 .37.16.37.37 0 .2-.16.37-.37.37a.37.37 0 0 1-.36-.37c0-.2.16-.37.36-.37zm-2.2-1.12c.2 0 .37.16.37.37 0 .2-.16.37-.37.37a.37.37 0 0 1-.36-.37c0-.2.16-.37.36-.37zm.74 1.12c.2 0 .36.16.36.37 0 .2-.16.37-.36.37a.37.37 0 0 1-.37-.37c0-.2.16-.37.37-.37zm-2.2-1.12c.2 0 .36.16.36.37 0 .2-.16.37-.36.37a.37.37 0 0 1-.37-.37c0-.2.16-.37.37-.37zm.73 1.12c.2 0 .37.16.37.37 0 .2-.17.37-.37.37a.37.37 0 0 1-.37-.37c0-.2.17-.37.37-.37zm-11 6.9c0-.93.74-1.68 1.65-1.68.91 0 1.65.75 1.65 1.67 0 .93-.74 1.68-1.65 1.68-.91 0-1.65-.75-1.65-1.68zm.73 0c0 .5.41.93.92.93.5 0 .92-.42.92-.94a.93.93 0 0 0-.92-.93c-.5 0-.92.42-.92.93zm15.4-.94c.2 0 .37.17.37.38 0 .2-.16.37-.37.37a.37.37 0 0 1-.36-.37c0-.21.16-.38.36-.38zm-1.46 0c.2 0 .36.17.36.38 0 .2-.16.37-.36.37a.37.37 0 0 1-.37-.37c0-.21.16-.38.37-.38zm2.2 1.12c.2 0 .36.17.36.37 0 .21-.16.38-.36.38a.37.37 0 0 1-.37-.38c0-.2.16-.37.37-.37zm-1.47 0c.2 0 .37.17.37.37 0 .21-.17.38-.37.38a.37.37 0 0 1-.37-.38c0-.2.17-.37.37-.37zm-2.2-1.12c.2 0 .37.17.37.38 0 .2-.17.37-.37.37a.37.37 0 0 1-.37-.37c0-.21.17-.38.37-.38zm.73 1.12c.2 0 .37.17.37.37 0 .21-.16.38-.37.38a.37.37 0 0 1-.36-.38c0-.2.16-.37.36-.37zm-2.2-1.12c.2 0 .37.17.37.38 0 .2-.16.37-.37.37a.37.37 0 0 1-.36-.37c0-.21.16-.38.36-.38zm.74 1.12c.2 0 .36.17.36.37 0 .21-.16.38-.36.38a.37.37 0 0 1-.37-.38c0-.2.16-.37.37-.37zm-2.2-1.12c.2 0 .36.17.36.38 0 .2-.16.37-.36.37a.37.37 0 0 1-.37-.37c0-.21.16-.38.37-.38zm.73 1.12c.2 0 .37.17.37.37 0 .21-.17.38-.37.38a.37.37 0 0 1-.37-.38c0-.2.17-.37.37-.37z"></path>
-                  </defs>
-                  <g>
-                    <g opacity=".94" transform="translate(-1214 -1775)">
-                      <use xlink:href="#42nna"></use>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="tezis__row">
-            <div class="tezis__item tezis__item_left">
-              <div class="tezis__item-text">
-                <p>Формирование инвестиционного портфеля на основе собственной системы инструментов на базе алгоритмов
-                  <span>deep learning</span>
-                </p>
-              </div>
-              <div class="tezis__item-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewbox="0 0 24 22">
-                  <metadata>
-                    <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
-                      <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-                        <rdf:description rdf:about=""></rdf:description>
-                      </rdf:rdf>
-                    </x:xmpmeta>
-                  </metadata>
-                  <defs>
-                    <style>
-                      .cls-1 {
-                        fill-rule: evenodd;
-                      }
-                    </style>
-                  </defs>
-                  <path class="cls-1" id="Forma_1" data-name="Forma 1" d="M962.909,1930.16a0.531,0.531,0,0,0-.545.58v7.52a0.532,0.532,0,0,1-.546.58H942.182a0.531,0.531,0,0,1-.546-0.58v-7.52a0.546,0.546,0,1,0-1.09,0v7.52a1.658,1.658,0,0,0,1.636,1.74h19.636a1.659,1.659,0,0,0,1.637-1.74v-7.52A0.532,0.532,0,0,0,962.909,1930.16Zm-0.545-8.11H941.636a1.664,1.664,0,0,0-1.636,1.74v3.7a1.709,1.709,0,0,0,1.255,1.68l8.563,2.03v1.85a0.531,0.531,0,0,0,.546.58h3.272a0.531,0.531,0,0,0,.546-0.58v-1.85l8.563-2.03a1.709,1.709,0,0,0,1.255-1.68v-3.7A1.664,1.664,0,0,0,962.364,1922.05Zm-9.273,10.42h-2.182v-2.31h2.182v2.31Zm9.818-4.98a0.553,0.553,0,0,1-.436.58l-8.291,1.97v-0.46a0.531,0.531,0,0,0-.546-0.58h-3.272a0.531,0.531,0,0,0-.546.58v0.46l-8.291-1.97a0.553,0.553,0,0,1-.436-0.58v-3.7a0.531,0.531,0,0,1,.545-0.58h20.728a0.531,0.531,0,0,1,.545.58v3.7Zm-8.182-9.49h-5.454a1.658,1.658,0,0,0-1.637,1.74v0.58a0.546,0.546,0,1,0,1.091,0v-0.58a0.531,0.531,0,0,1,.546-0.58h5.454a0.531,0.531,0,0,1,.546.58v0.58a0.546,0.546,0,1,0,1.091,0v-0.58A1.658,1.658,0,0,0,954.727,1918Z"
-                    transform="translate(-940 -1918)"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
+          <div class="schedule__grid-bg"></div>
         </div>
       </section>
       <button class="support-btn" type="button">

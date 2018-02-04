@@ -44,3 +44,13 @@ $('[data-fancybox]').fancybox();
 
 /** Export initialized common scripts by default */
 export default Common.init();
+
+const $scheduleIcon = $('.schedule__item-icon');
+
+$scheduleIcon.on('mouseenter', function () {
+  $('body').addClass('is-shadow');
+});
+
+$scheduleIcon.on('mouseleave', function () {
+  $('body').removeClass('is-shadow');
+});
