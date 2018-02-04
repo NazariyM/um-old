@@ -1,12 +1,13 @@
 import '../modules/dev/noTouch';
 import LangList from './LangList';
+import fancybox from '@fancyapps/fancybox';
 // import Header from './Header';
 // import objectFitVideos from 'object-fit-videos';
 // import objectFitImages from 'object-fit-images';
 import { initSliders } from './initSliders';
 import { initCharts } from './initCharts';
 // import { initAccordion } from './initAccordion';
-// import Popup from 'vintage-popup';
+import Popup from 'vintage-popup';
 // import CTabs from './c-tabs';
 
 /**
@@ -34,10 +35,12 @@ export class Common {
 // });
 
 /** popup init*/
-// Popup.expose($);
-// const $popup = $('[data-popup-target]');
+Popup.expose($);
+const $popup = $('[data-popup-target]');
 
-// $popup.popup();
+$popup.popup();
+
+$('[data-fancybox]').fancybox();
 
 /** Export initialized common scripts by default */
 export default Common.init();

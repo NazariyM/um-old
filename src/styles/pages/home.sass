@@ -8,7 +8,6 @@
     display: flex
     align-items: flex-start
     justify-content: space-between
-    padding: 28px 24px
     padding: 28px 116px 28px 24px
     border-left: 1px solid #fff
   &__text
@@ -177,3 +176,147 @@
       top: -22.5%
       right: -2.8%
       height: 201px
+      
+.system
+  padding: 50px 0
+  &__container
+    position: relative
+    font-size: 0
+    text-align: center
+  &__item
+    position: relative
+    z-index: 101
+    display: inline-block
+    vertical-align: top
+    width: 33.33333%
+    text-align: center
+    &[data-popup-target]
+      cursor: pointer
+    &-title
+      margin-bottom: 30px
+      color: #191919
+      +f('os-700')
+      font-size: 16px
+      line-height: 22px
+      transition: .5s ease
+      
+    &-img
+  &__arrows
+    position: absolute
+    z-index: 102
+    fill: #98acba
+    &_1
+      top: 20%
+      left: 34%
+    &_2
+      top: 20%
+      left: 66%
+    &_3
+      top: 40%
+      left: 50%
+      transform: rotate(90deg)
+    
+.popup-opened
+  .system__item
+    pointer-events: none
+  .system__item-title
+    color: #fff
+    
+.system-slider
+  max-width: 730px
+  margin: 0 auto
+  display: none
+  &.slick-initialized
+    display: block
+  &__item
+    text-align: center
+    transition: all 0.3s ease-in-out
+    cursor: pointer
+    z-index: 3
+    transform: scale(0.74) translate(90%, 0)
+    +md
+      padding: 30px
+    +xs
+      transform: none
+      padding: 25px 15px
+    &-img
+      display: block
+      position: relative
+      border: 10px solid #fff
+      border-radius: 50%
+      overflow: hidden
+      width: 228px
+      height: 228px
+      margin: 0 auto
+      +cover
+      &-icon
+        +vcenter
+        opacity: 0
+        transition: opacity .3s ease
+  
+  .slick-track
+    display: flex
+    align-items: center
+  .slick-list
+    position: relative
+    display: flex
+    align-items: flex-end
+    height: 330px
+  &__item.slick-center
+    transform: scale(1) translate3d(0, 0, 0)
+    cursor: default
+  &__item.slick-center
+    z-index: 3
+  &__item.slick-center + &__item
+    transform: scale(0.74) translate(-90%, 0)
+    z-index: 2
+    +xs
+      transform: none
+  &__arr
+    position: absolute
+    top: 66%
+    margin-top: -13px
+    z-index: 3
+    &_prev
+      left: 17.5%
+    &_next
+      right: 17.5%
+    svg
+      fill: $blue
+      +trs
+    &.slick-disabled svg
+      fill: #fff
+  &__tooltip
+    pointer-events: none
+    opacity: 0
+    position: absolute
+    top: -44%
+    left: 67%
+    min-width: 300px
+    z-index: 105
+    padding: 5px 0
+    font-size: 16px
+    text-align: left
+    color: #fff
+    transition: opacity .3s ease
+    &::after
+      position: absolute
+      top: 0
+      left: 7px
+      height: 1px
+      width: 97%
+      background: #fff
+      content: ''
+    &-title
+      +f('os-600')
+    svg
+      position: absolute
+      top: 100%
+      left: -12px
+    
+  &__item.slick-current
+    .no-touch &:hover .system-slider__item-img-icon
+      opacity: 1
+    
+  &__item.slick-current &__tooltip
+    opacity: 1

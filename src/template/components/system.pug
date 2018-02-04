@@ -1,0 +1,96 @@
+if system ? system : system = []
+
+//begin system
++b.SECTION.system(class= system.classMod ? system.classMod : '')
+	+e.container.container
+		+e.item
+			+e.H3.item-title  Market data
+			+e.item-img
+				+e.IMG(src='static/img/icons/market-data.png' alt='image')
+		+e.item(data-popup-target='system-popup')
+			+e.H3.item-title  Processing cloud
+			+e.H3.item-title
+			+e.item-img
+				+e.IMG(src='static/img/icons/processing-cloud.png' alt='image')
+		+e.item
+			+e.H3.item-title  Portfolio
+			+e.item-img
+				+e.IMG(src='static/img/icons/portfolio.svg' alt='image')
+		+e.item
+			+e.H3.item-title  Internet
+			+e.item-img
+				+e.IMG(src='static/img/icons/internet.svg' alt='image')
+
+		+e.SVG.arrows._1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='41', height='28', viewbox='0 0 41 28')
+			defs
+				path#t0vba(d='M759.26 900l-3.26 3.27L766.7 914 756 924.73l3.26 3.27 13.96-14z')
+				path#t0vbb(d='M771.1 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27 13.96-14z')
+				path#t0vbc(d='M783.04 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27L797 914z')
+			g
+				g(transform='translate(-756 -900)')
+					g(opacity='.15')
+						use(xlink:href='#t0vba')
+					g(opacity='.5')
+						use(xlink:href='#t0vbb')
+					g
+						use(xlink:href='#t0vbc')
+
+		+e.SVG.arrows._2(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='41', height='28', viewbox='0 0 41 28')
+			defs
+				path#t0vba(d='M759.26 900l-3.26 3.27L766.7 914 756 924.73l3.26 3.27 13.96-14z')
+				path#t0vbb(d='M771.1 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27 13.96-14z')
+				path#t0vbc(d='M783.04 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27L797 914z')
+			g
+				g(transform='translate(-756 -900)')
+					g(opacity='.15')
+						use(xlink:href='#t0vba')
+					g(opacity='.5')
+						use(xlink:href='#t0vbb')
+					g
+						use(xlink:href='#t0vbc')
+
+		+e.SVG.arrows._3(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='41', height='28', viewbox='0 0 41 28')
+			defs
+				path#t0vba(d='M759.26 900l-3.26 3.27L766.7 914 756 924.73l3.26 3.27 13.96-14z')
+				path#t0vbb(d='M771.1 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27 13.96-14z')
+				path#t0vbc(d='M783.04 900l-3.26 3.27 10.7 10.73-10.7 10.73 3.26 3.27L797 914z')
+			g
+				g(transform='translate(-756 -900)')
+					g(opacity='.15')
+						use(xlink:href='#t0vba')
+					g(opacity='.5')
+						use(xlink:href='#t0vbb')
+					g
+						use(xlink:href='#t0vbc')
+
+	+b.popup(data-popup-id='system-popup', tabindex='-1', role='dialog')
+		+e.container._top
+			+b.system-slider.js-system-slider
+				-i = 0
+				while i < 6
+					+e.item
+						+e.A.item-img(href='http://static4.businessinsider.com/image/58f4f370f40dae1c008b4c85/28-hot-cars-at-the-2017-new-york-auto-show.jpg' data-fancybox="gallery")
+							+e.IMG(src='static/img/content/system_img.png' alt='image')
+							+e.SVG.item-img-icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='23', height='23', viewbox='0 0 23 23')
+								defs
+									path#pxmua(d='M957 654h1v11h11v1h-11v11h-1v-11h-11v-1h11z')
+								g
+									g(transform='translate(-946 -654)')
+										use(fill='#fff', xlink:href='#pxmua')
+
+						+e.tooltip
+							+e.tooltip-title Lorem Ipsum
+							+e.P это текст-"рыба", часто используемый
+							svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='89', height='49', viewbox='0 0 89 49')
+								defs
+									path#gxgva(d='M1034 512v-1h71v1z')
+									path#gxgvb(d='M1024.36 551.35l-.72-.7 39-40 .72.7z')
+									path#gxgvc(d='M1025.5 540a9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0-19z')
+								g
+									g(transform='translate(-1016 -510)')
+										use(fill='#dee2ef', xlink:href='#gxgva')
+									g(transform='translate(-1016 -510)')
+										use(fill='#dee2ef', xlink:href='#gxgvb')
+									g(transform='translate(-1016 -510)')
+										use(fill='#0094f8', xlink:href='#gxgvc')
+					-i++
