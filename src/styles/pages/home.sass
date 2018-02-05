@@ -603,7 +603,7 @@
         +coverdiv
         border-radius: 50%
         background: $blue
-        z-index: 207
+        z-index: 407
         content: ''
         +trs
       &::after
@@ -622,7 +622,7 @@
         &::before
           opacity: 1
       .icon-plus
-        z-index: 208
+        z-index: 408
     &-tooltip
       pointer-events: none
       visibility: hidden
@@ -630,7 +630,7 @@
       position: absolute
       bottom: calc(100% + 17px)
       left: calc(50% - 168px)
-      z-index: 203
+      z-index: 403
       width: 430px
       padding: 15px 20px
       background: #fff
@@ -679,3 +679,156 @@
         height: 22px
         background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAAAWCAYAAABud6qHAAAFF0lEQVRYR+2YyU4ySxiGqR7pCFGCaExMdOPCu/AmuB7C9XAT3oBbXbjRxMQoEjUMTfVQdfJ+p79OUcBPg3r+s7ATqKGrp6ffb2pR+912IiB2Our3oNrfAPfHa2qtN74WIVaeYvOBG89cfcFPghMMod/v03V6vV55Z4PBgOa63S7NXV9fi6urK4121e1jH88PBgPqdrtd3e/3y+W9Xo/WWGB/BOh3gCvPAVCABEAMptPplPubzSb1oyii9vHxkdqLi4va09MT9c/Pzxe4PTw80Pj09FTf399T/+zsrIQRxzH1x+MxtQXgcj/AAmgB89sg7gqOjrNBQT2sGEACoCAIBKAAyPPzM4193xee59E53t/fxeHhYe3j40O0220C8/n5Wd7X/v6+Ho1GtYODA/329lZrtVr08FmW6TRNqZ8kiT45OdGYQ9+ECZBQKKvTUuXOILcFR+ZnqophMSioCMDCMCRIURQ5gANQ+AVB4EwmE9FqtYTjOGI6nQrXdakPCHEcL9xTFEX0cEopnec59aMoUjzGXKPRUC8vLxpQGWi73VYmSChyFcRdlVgVXOmv4EJghmyCprKGw6HDsABjMplg7MRx7Pi+Tz8AklI6rutSP01Tp16v19CGYQj1LNxTEARaSkngwjDUs9lM+76vtNaApMIwVGmaKsBEC5BSStVsNgncdDpVUkpS4dHRkWKzHg6H2lThtgA3gVsySYCDOa4DNh6PAYCAeZ7nJEniAlKSJE6WZdQvoGEMeDRO01TwZjo5AMLY8zw1n881WoDL8xyqo9Z13Ryt7/uY1EEQ5ICYJAmOIYg2QFuB8DxGYNlowhvB2aYJpdnQ9vb2AInMMI5jFwqr1+suwKVp6vq+T/LK89wDrDzPsY/msBVzpNYsyxbuyfM8sKMNoAAOW5ZlOYDhV8wDVgkQ8EajkUILU4YS4zhWMOG7uztS31fM90/glswT/uzm5sbBm3l9fXUuLy/FaDRy4MdgmoAGeFJKF+oCODwrwGFjYGh5nOc5wRNC4CcwXqE47TgOzJOg4R0wMCFE5nleDpAMEwChPqgO4KC8KIqwn0y30+lAjWS+DA+K2yYCV1Ic+zUzEGwLDnAAkeEBHJSmlPrX2RXgAM9UXWGqJThAK0yU4GG8DhygzedzUhzg/efgzCi6jakiCARBQKYKHwfzBDiA0lqT2fLGakNrKw7wYLIkN5AugHEf4Gaz2YKvk1KS0gp4pZ9D2mKaqhkkcN2qOd8mxZG/rOLn7GiKoACzRSSFn4PZWoGBFAdQBTxE2IUAwb6N0xH2b9wiSBT+joIEm2cYhgTNVpoZXXc1UX6pVcCV8IqDKB2x8zeA43QECS6i6/Hx8VJKAhU2Gg0BBXJKAlpSSsrlkJLYipvP5zWkIkWAQD5HeVyRolAawikJA0MwsNMRVBzs1346HVl4iFXqW5UAo4QyISLicl6HtggkFFCazWbNToLtiwIQ5gDDTHyRu2EO1QUnwIiccPxQF8o0Owigiri9vdWGSVIRZF9z07iq4ladZ22Oh8V2JWGXXEVutlB2YQ6lF18MJdi6cgtrUHIBDPpshqaqMP+d1YIJ4Svgls7DvrBwsmTi+DPrVz6IC32MUaZBpdi42Od1UA36WxT4pCD+avJdtemS6W2S5Bf2r/xqwuezPyutuo75iYmVw+tQLhW+dh0kXrq1GVZ55u9SXJVrVXpp5ofMNR8szfP8CJQqD/M3wVW5v//tml9wO76afwDoOTRiPwJxLAAAAABJRU5ErkJggg==")
         content: ''
+        
+.result
+  padding: 100px 0
+  background: url("../img/bg/result_bg.png") no-repeat 65% 149%/1793px 1196px
+  &__container
+    position: relative
+    min-height: 1198px
+  &__item
+    position: absolute
+    padding-left: 40px
+    width: 300px
+    &::after
+      pointer-events: none
+      position: absolute
+      top: -30px
+      left: -100px
+      content: ''
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      background-size: contain
+    &_1
+      top: 1.7%
+      left: 28.3%
+      width: 330px
+      &::after
+        top: 61px
+        left: -12px
+        width: 166px
+        height: 273px
+        background-image: url("../img/bg/line-dot_1.png")
+    &_2
+      top: -3.4%
+      left: 57.1%
+      width: 400px
+      &::after
+        top: 61px
+        left: -12px
+        width: 166px
+        height: 301px
+        background-image: url("../img/bg/line-dot_2.png")
+      .result__value:nth-child(3) .result__value-circle
+        top: 9px
+    &_3
+      top: 14.2%
+      left: 3.8%
+      &::after
+        top: 39px
+        left: -14px
+        width: 166px
+        height: 306px
+        background-image: url("../img/bg/line-dot_3.png")
+      .result__title
+        margin-bottom: 45px
+    &_4
+      top: 31.4%
+      left: 23.5%
+      &::after
+        top: 38px
+        left: -68px
+        width: 278px
+        height: 306px
+        background-image: url("../img/bg/line-dot_3.png")
+      .result__title
+        margin-bottom: 43px
+        padding-left: 12px
+    &_5
+      top: 20.5%
+      left: 65.8%
+      &::after
+        top: 38px
+        left: -71px
+        width: 278px
+        height: 306px
+        background-image: url("../img/bg/line-dot_3.png")
+      .result__title
+        margin-bottom: 44px
+    &_6
+      width: 260px
+      top: 50.7%
+      left: 4.3%
+      &::after
+        top: 60px
+        left: -12px
+        width: 166px
+        height: 255px
+        background-image: url("../img/bg/line-dot_4.png")
+      .result__title
+        margin-bottom: 51px
+    &_7
+      top: 61%
+      left: 57.5%
+      &::after
+        top: 40px
+        left: -13px
+        width: 183px
+        height: 302px
+        background-image: url("../img/bg/line-dot_1.png")
+      .result__title
+        padding-left: 12px
+    
+  &__title
+    margin-bottom: 53px
+    +f('os-700')
+    font-size: 18px
+  &__value
+    display: flex
+    align-items: center
+    &:not(:last-child)
+      margin-bottom: 22px
+    &-label
+      margin-bottom: 5px
+      color: #b2b1b1
+      font-size: 13px
+      line-height: 1
+      +f('os-700')
+    &-block + &-block
+      margin-top: 20px
+    &-circle
+      position: relative
+      height: 61px
+      width: 61px
+      margin-right: 17px
+      border-radius: 50%
+      background: #ffff
+      border: 7px solid $blue
+      z-index: 2
+      &::after
+        position: absolute
+        top: 50%
+        margin-top: -6px
+        right: -12px
+        z-index: -1
+        +arr(6, 12, #026db5, r)
+        content: ''
+    &-text
+      color: #026db5
+      +f('os-700', 46, 45)
+    &_triple
+      position: relative
+      &::after
+        position: absolute
+        left: 30px
+        top: 0
+        background: url("../img/icons/line-triple.png") no-repeat 50% 50% / contain
+        width: 73px
+        height: 166px
+        z-index: 1
+        content: ''
+      .result__value-circle::after
+        display: none
+      .result__value-circle
+        top: 8px
+        margin-right: 26px
