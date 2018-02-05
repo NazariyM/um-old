@@ -2,22 +2,22 @@ if system ? system : system = []
 
 //begin system
 +b.SECTION.system(class= system.classMod ? system.classMod : '')
+	+e.BUTTON.popup-instance(type='button' data-popup-target='system-popup')
 	+e.container.container
-		+e.item
-			+e.H3.item-title  Market data
+		+e.item._data
+			+e.H3.item-title Market data
 			+e.item-img
 				+e.IMG(src='static/img/icons/market-data.png' alt='image')
-		+e.item(data-popup-target='system-popup')
-			+e.H3.item-title  Processing cloud
-			+e.H3.item-title
+		+e.item._cloud.js-system-popup
+			+e.H3.item-title Processing cloud
 			+e.item-img
 				+e.IMG(src='static/img/icons/processing-cloud.png' alt='image')
-		+e.item
-			+e.H3.item-title  Portfolio
+		+e.item._portfolio
+			+e.H3.item-title Portfolio
 			+e.item-img
-				+e.IMG(src='static/img/icons/portfolio.svg' alt='image')
-		+e.item
-			+e.H3.item-title  Internet
+				+e.IMG(src='static/img/icons/portfolio.png' alt='image')
+		+e.item._internet
+			+e.H3.item-title Internet
 			+e.item-img
 				+e.IMG(src='static/img/icons/internet.svg' alt='image')
 

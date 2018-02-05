@@ -2,12 +2,9 @@ import '../modules/dev/noTouch';
 import LangList from './LangList';
 import fancybox from '@fancyapps/fancybox';
 // import Header from './Header';
-// import objectFitVideos from 'object-fit-videos';
-// import objectFitImages from 'object-fit-images';
 import { initSliders } from './initSliders';
 import { initCharts } from './initCharts';
-// import { initAccordion } from './initAccordion';
-import Popup from 'vintage-popup';
+import { initPopups } from './initPopups';
 // import CTabs from './c-tabs';
 
 /**
@@ -20,10 +17,9 @@ export class Common {
 
   static init() {
     new LangList;
-    // objectFitImages();
     initSliders();
     initCharts();
-    // initAccordion();
+    initPopups();
   }
 }
 
@@ -34,11 +30,6 @@ export class Common {
 //   tab.init();
 // });
 
-/** popup init*/
-Popup.expose($);
-const $popup = $('[data-popup-target]');
-
-$popup.popup();
 
 $('[data-fancybox]').fancybox();
 
@@ -48,9 +39,11 @@ export default Common.init();
 const $scheduleIcon = $('.schedule__item-icon');
 
 $scheduleIcon.on('mouseenter', function () {
+  $(this).addClass('is-active');
   $('body').addClass('is-shadow');
 });
 
 $scheduleIcon.on('mouseleave', function () {
+  $(this).removeClass('is-active');
   $('body').removeClass('is-shadow');
 });

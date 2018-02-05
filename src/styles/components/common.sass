@@ -5,6 +5,9 @@ body
   color: $gray
   -webkit-font-smoothing: subpixel-antialiased
   -moz-osx-font-smoothing: grayscale
+  transition: 1s ease
+  will-change: top
+  
   &::after
     pointer-events: none
     position: fixed
@@ -20,7 +23,7 @@ body
   &.is-shadow
     &::after
       opacity: 1
-      
+  
 //&.is-locked
 //	position: fixed
 //	top: 0

@@ -1,0 +1,16 @@
+extends ../extend/default
+
+block variables
+	-title = 'Private investors';
+
+block main
+
+	-page = {title: 'Market research'}
+	include ../components/page
+
+	-chart = {classMod: '_entry-page'}
+	include ../components/chart
+
+	include ../components/schedule
+
+	include ../components/support-btn

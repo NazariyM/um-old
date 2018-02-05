@@ -4,14 +4,16 @@ block variables
 	-title = 'Institutional investors';
 
 block main
+	main.content
 
-	-page = {title: 'Private investors'}
-	include ../components/page
+		-page = {title: 'Institutional investors'}
+		include ../components/page
 
-	include ../components/chart
+		-chart = {classMod: '_entry-page'}
+		include ../components/chart
 
-	include ../components/system
+		include ../components/system
 
-	include ../components/tezis
+		include ../components/tezis
 
-	include ../components/support-btn
+		include ../components/support-btn
