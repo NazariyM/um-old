@@ -20,7 +20,7 @@ body
   &.is-shadow
     &::after
       opacity: 1
-  
+
 //&.is-locked
 //	position: fixed
 //	top: 0
@@ -113,63 +113,52 @@ body
   background-color: #fafafa
   +placeholder-color(#acacac)
 
-//.check-box
-//	position: relative
-//	label
-//		display: flex
-//		align-items: center
-//		+f('geo-500')
-//		font-size: 14px
-//		color: $black
-//		cursor: pointer
-//	&__square
-//		position: relative
-//		width: 20px
-//		height: 20px
-//		flex: 0 0 20px
-//		margin-right: 8px
-//		border: 2px solid #d7d7d7
-//		background: $white
-//		font-size: 0
-//		.icon
-//			opacity: 0
-//			transform: scale(.6)
-//			position: absolute
-//			top: -4px
-//			right: -8px
-//			font-size: 19px
-//			transition: .15s ease-in
-//	span
-//		user-select: none
-//
-//	input
-//		display: none
-//		&:checked + label .icon-check
-//			opacity: 1
-//			transform: scale(1)
-//	&_more
-//		text-align: left
-//		label
-//			align-items: flex-start
-//		span
-//			margin-top: 0
-//			line-height: 17px
-//	&_more &__square
-//		margin-top: 5px
-//		margin-right: 15px
-		
-//.textarea
-//	display: block
-//	width: 100%
-//	height: 100px
-//	min-height: 167px
-//	padding: 20px
-//	border: 0
-//	resize: none
-//	+f('geo-400', 17)
-//	+placeholder-color(#8d8d8d)
-//	+xs
-//		padding: 15px
+.check-box
+  position: relative
+  &:hover span
+    color: $blue
+  label
+    display: block
+    cursor: pointer
+    color: #616262
+    font-size: 0
+    text-align: left
+    span
+      display: inline-block
+      vertical-align: middle
+      width: calc(100% - 14px)
+      padding-left: 9px
+      font-size: 14px
+      user-select: none
+      +trs
+  &__square
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    width: 14px
+    height: 14px
+    border: 1px solid #d1d1d1
+    background: $white
+    font-size: 0
+    &::after
+      position: absolute
+      width: 6px
+      height: 6px
+      top: 50%
+      left: 50%
+      margin-top: -3px
+      margin-left: -3px
+      background-color: $blue
+      content: ''
+      opacity: 0
+      transform: scale(.5)
+      +trs
+  
+  input
+    display: none
+    &:checked + label .check-box__square::after
+      opacity: 1
+      transform: scale(1)
 
 //.slider-btn
 //	position: absolute
@@ -214,15 +203,6 @@ body
 //			transform: scale(1.5)
 //		button
 //			+hide-text
-
-//h1, h2, h3, h4, h5, h6, p, a, span, div, img, mark, ul, li
-//	&::selection
-//		color: $white
-//		background-color: #f16eaa
-//
-//+selection
-//	color: $white
-//	background-color: #f16eaa
 
 .support-btn
   position: fixed
@@ -287,11 +267,29 @@ body
   &::before
     height: 100%
     width: 1px
+    left: 50%
   &::after, &::before
+    +gpu
     position: absolute
     background: #fff
     content: ''
     z-index: 2
+  &_close
+    opacity: 1
+    width: 15px
+    height: 15px
+    &::after
+      top: 50%
+      left: 0
+      margin-top: -1px
+      transform: rotate(-45deg)
+    &::before
+      transform: rotate(45deg)
+      height: 1px
+      width: 100%
+      top: 50%
+      left: 0
+      margin-top: -1px
   &_sm
     width: 11px
     height: 11px

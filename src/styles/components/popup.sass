@@ -29,41 +29,32 @@
     visibility: visible
   &__close
     position: absolute
-    top: -19px
-    right: -19px
-    width: 51px
-    height: 51px
+    top: 0
+    right: -31px
+    width: 46px
+    height: 47px
     cursor: pointer
     display: flex
     align-items: center
     justify-content: center
-    border-radius: 50%
-    background-color: #ffd52f
+    background-color: #064b7a
     +trs
-    +sm
-      top: -17px
-      right: -17px
-      width: 37px
-      height: 37px
-    +xs
-      top: -19px
-      right: 4px
-    .no-touch &:hover .icon
-      fill: $blue
-    .icon
-      fill: #000
-      margin-top: 1px
-      font-size: 20px
-      z-index: 2
-      +trs
-      +sm
-        font-size: 17px
+    &:hover
+      background: lighten(#064b7a, 15)
+    &-icon
+      position: relative
+      width: 20px
+      height: 20px
+      .icon-plus
+        position: static
+        opacity: 1
   
   &__container
     display: inline-block
     vertical-align: middle
     width: 100%
-    max-width: 740px
+    max-width: 748px
+    padding: 0 15px
     position: relative
     margin: 30px auto
     z-index: 102
@@ -74,6 +65,7 @@
       padding: 30px 15px
     &_top
       vertical-align: top
+      max-width: 740px
       margin: 30px auto
 
 body.popup-opened
@@ -83,3 +75,7 @@ body.popup-opened
   -webkit-transform: translate3d(0, 0, 0)
   -moz-transform: translate3d(0, 0, 0)
   transform: translate3d(0, 0, 0)
+  
+.popup.opened[data-popup-id='login-popup']
+  background: rgba(#0e1c2a, .87)
+  z-index: 350

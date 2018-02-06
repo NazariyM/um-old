@@ -3,7 +3,7 @@
   +e.container.container
     +e.row
       +e.col
-        +b.A.logo.footer__logo(href='#!')
+        +b.A.logo.footer__logo(href='home.html')
           svg(class='logo__icon' xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='26', height='24', viewbox='0 0 26 24')
             defs
               path#u4pba(d='M391 115V91h11v6h-6v12h6v6zm8-16h4v2h-2v4h2v2h-4zm4 3h2v2h-2zm2-3h4v8h-4v-2h2v-4h-2zm1-8h11v24h-11v-6h6V97h-6z')
@@ -73,25 +73,27 @@
             +e.UL.list-items
               +e.LI
                 +e.A(href='#ru')
-                  svg(class='icon flag_ru' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 9 6', width='900', height='600')
-                    rect(fill='#fff', width='9', height='3')
-                    rect(fill='#d52b1e', y='3', width='9', height='3')
-                    rect(fill='#0039a6', y='2', width='9', height='2')
+                  +e.list-icon
+                    svg(class='flag_ru' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 9 6', width='900', height='600')
+                      rect(fill='#fff', width='9', height='3')
+                      rect(fill='#d52b1e', y='3', width='9', height='3')
+                      rect(fill='#0039a6', y='2', width='9', height='2')
+                  +e.SPAN.list-text Русский
+
               +e.LI
                 +e.A(href='#es')
-                  svg(class='icon flag_est' xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='24', height='18', viewbox='0 0 24 18')
-                    defs
-                      path#4cuaa(d='M1488 46V36h24v10z')
-                      path#4cuac(d='M1488 34v-6h24v6z')
-                      path#4cuad(d='M1488 40v-6h24v6z')
-                      clippath#4cuab
-                        use(fill='#fff', xlink:href='#4cuaa')
-                    g
-                      g(transform='translate(-1488 -28)')
-                        g
-                          use(fill='#eee', xlink:href='#4cuaa')
-                          use(fill='#fff', fill-opacity='0', stroke='#dedede', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='50', stroke-width='2', clip-path='url("#4cuab")', xlink:href='#4cuaa')
-                        g
-                          use(fill='#3282c5', xlink:href='#4cuac')
-                        g
-                        use(fill='#1e0f00', xlink:href='#4cuad')
+                  +e.list-icon
+                    +e.IMG(src='https://lipis.github.io/flag-icon-css/flags/4x3/es.svg' alt='image')
+                  +e.SPAN.list-text Español
+
+              +e.LI
+                +e.A(href='#es')
+                  +e.list-icon
+                    +e.IMG(src='https://lipis.github.io/flag-icon-css/flags/4x3/fi.svg' alt='image')
+                  +e.SPAN.list-text Suomi
+
+              +e.LI
+                +e.A(href='#es')
+                  +e.list-icon
+                    +e.IMG(src='https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg' alt='image')
+                  +e.SPAN.list-text English

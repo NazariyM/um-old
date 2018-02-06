@@ -10,14 +10,13 @@ export default class LangList {
   switch() {
     this.$langList.each(function () {
       const $this = $(this);
-      const $langSub = $this.find('.lang__list-items');
+      const $currentLink = $this.find('.lang__link');
+
+      $currentLink.on('click', function (e) {
+        e.preventDefault();
+      });
 
       $this.on('click', function (ev) {
-        const currentLink = ev.target.closest('.lang__link');
-
-        if (currentLink) {
-          ev.preventDefault();
-        }
 
         $(this).toggleClass('is-active');
       });

@@ -1,11 +1,9 @@
 import '../modules/dev/noTouch';
 import LangList from './LangList';
 import fancybox from '@fancyapps/fancybox';
-// import Header from './Header';
 import { initSliders } from './initSliders';
 import { initCharts } from './initCharts';
 import { initPopups } from './initPopups';
-// import CTabs from './c-tabs';
 
 /**
  * Website's common scripts (example).
@@ -22,14 +20,6 @@ export class Common {
     initPopups();
   }
 }
-
-/** tabs init */
-// const $tabs = $('.c-tabs');
-// $tabs.each((index, el) => {
-//   const tab = new CTabs($(el));
-//   tab.init();
-// });
-
 
 $('[data-fancybox]').fancybox();
 

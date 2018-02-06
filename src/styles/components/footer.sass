@@ -13,11 +13,12 @@
     p, span
       color: #fff
   &__row
-    display: flex
     margin: 0 -14px
+    +clr
   &__col
     position: relative
-    flex: 1 0 calc(33.33333% - 28px)
+    float: left
+    width: calc(33.33333% - 28px)
     margin: 0 14px
     border-right: 1px solid #3b4b55
     &::before, &::after
@@ -58,9 +59,19 @@
         color: $blue
   &__subscr
     margin-top: 20px
-  &__lang .lang__list
-    transform: rotate(180deg)
-    
+  &__lang 
+    .lang__list-items
+      top: auto
+      bottom: 42px
+      right: -60px
+      border-radius: 3px 3px 0 0
+      border-color: #3b4b55
+      background: #2e393f
+      a
+        .no-touch &:hover
+          background: $blue
+    .lang__list-text
+      color: #fff
 .subscr
   &__title
     margin-bottom: 30px

@@ -10,6 +10,7 @@
 +font('OpenSans-Regular', 'OpenSans-Regular')
 +font('OpenSans-SemiBold', 'OpenSans-SemiBold')
 +font('OpenSans-Bold', 'OpenSans-Bold')
++font('AmazonEmber-Regular', 'AmazonEmber-Regular')
 
 =f($name, $font-size: null, $line-height: null, $letter-spacing: null)
 	$font-family: null
@@ -19,6 +20,8 @@
 		$font-family: "OpenSans-SemiBold"
 	@if $name == "os-700"
 		$font-family: "OpenSans-Bold"
+	@if $name == "ae-400"
+		$font-family: "AmazonEmber-Regular"
 	font-family: $font-family, Arial, sans-serif
 	@if $font-family != null
 		font-weight: normal
