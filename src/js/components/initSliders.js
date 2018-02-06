@@ -17,34 +17,6 @@ export function initSliders() {
     dotsClass: 'slider-dots'
   };
 
-  // const $learnSld = $('.js-learn-slider');
-  // $learnSld.slick($.extend({}, defaultOptions, {
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   speed: 500,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1023,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         infinite: true,
-  //         dots: true
-  //       }
-  //     }, {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //         infinite: true,
-  //         dots: true,
-  //         arrows: false,
-  //         adaptiveHeight: true
-  //       }
-  //     }
-  //   ]
-  // }));
-
   const $chartSld = $('.js-chart-slider');
 
   $chartSld.slick($.extend({}, defaultOptions, {

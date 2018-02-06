@@ -20,20 +20,12 @@ export default class LangList {
         }
 
         $(this).toggleClass('is-active');
-        $langSub.slideToggle({
-          duration: 300,
-          easing: 'swing'
-        });
       });
 
       $document.on('click', function (e) {
         if ($(e.target).closest($this).length !== 0) {
 
         } else {
-          $langSub.slideUp({
-            duration: 300,
-            easing: 'swing'
-          });
           $this.removeClass('is-active');
         }
       });

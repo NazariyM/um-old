@@ -36,13 +36,13 @@
       width: 172px
       height: 172px
       border-radius: 50%
-      border: 13px solid rgba(#fff, .3)
-      background: rgba(255, 255, 255, 0.3)
-      .no-touch &:hover::after
-        background: rgba($blue, .3)
+      border: 13px solid rgba(#fff, .11)
+      background: rgba(255, 255, 255, 0.1)
+      .no-touch &:hover .screen__action-icon use
+        fill: $blue
       &::after
         +coverdiv
-        border: 2px solid rgba(255, 255, 255, 0.77)
+        border: 2px solid rgba(255, 255, 255, 0.55)
         content: ''
         background: rgba(#fff, .7)
         border-radius: 50%
@@ -51,12 +51,14 @@
     &-icon
       position: relative
       z-index: 2
+      use
+        +trs
     &-tooltip
       position: absolute
       top: -66px
       left: 90%
       padding: 0 20px
-      height: 30px
+      height: 31px
       line-height: 30px
       white-space: nowrap
       background: $blue
@@ -66,7 +68,7 @@
         color: #fff
       &-icon
         position: absolute
-        top: -7px
+        top: -8px
         left: 0
       
   &__bg
@@ -238,6 +240,7 @@
         
 .system
   padding: 22px 0 48px
+  min-height: 736px
   &__container
     position: relative
     font-size: 0
@@ -265,9 +268,6 @@
       position: relative
       img
         position: relative
-      &::after
-        position: absolute
-        content: ''
     &_data
       img
         top: -6px
@@ -276,50 +276,40 @@
         left: 12px
     &_cloud
       img
+        position: absolute
+        min-width: 501px
         top: 1px
-        left: -6px
-      .system__item-img::after
-        width: 537px
-        height: 79px
-        left: -100px
-        bottom: -40px
-        background: url('../img/icons/processing-cloud_shadow.svg') no-repeat
+        left: -85px
       .system__item-title
         left: -5px
     &_portfolio
       img
-        top: -2px
-        left: -17px
-      .system__item-img::after
-        width: 428px
-        height: 75px
-        left: -40px
-        bottom: -40px
-        background: url('../img/icons/portfolio_shadow.png') no-repeat
+        position: absolute
+        min-width: 428px
+        top: -5px
+        left: -65px
       .system__item-title
         left: -22px
         
     &_internet
       margin-top: 118px
       img
-        left: 2px
-      .system__item-title
-        left: -7px
-        margin-bottom: -20px
-          
+        position: absolute
+        left: 35px
+        
   &__arrows
     position: absolute
+    top: 28.7%
     z-index: 307
     fill: #98acba
     &_1
-      top: 22.7%
       left: 32.7%
     &_2
-      top: 22.7%
+      
       left: 63.5%
     &_3
-      top: 50%
-      left: 47.6%
+      top: 74%
+      left: 48.2%
       transform: rotate(90deg)
     
 .popup-opened
@@ -491,7 +481,7 @@
       align-items: center
       justify-content: center
       flex-shrink: 0
-      width: 67px
+      width: 68px
       height: 66px
       background: url("../img/icons/tezis-circle.svg") 50% 50% / contain no-repeat
       &::after
@@ -499,6 +489,9 @@
         z-index: 1
         background: url("../img/bg/tezis-dots.svg") 100% 100%/cover no-repeat
         content: ''
+      .icon-data
+        position: relative
+        top: 2px
     &-text
       padding-right: 30px
       text-align: right
@@ -821,8 +814,8 @@
       &::after
         position: absolute
         left: 30px
-        top: 0
-        background: url("../img/icons/line-triple.png") no-repeat 50% 50% / contain
+        top: 45px
+        background: url("../img/bg/line-triple.png") no-repeat 50% 50% / contain
         width: 73px
         height: 166px
         z-index: 1

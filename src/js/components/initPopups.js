@@ -1,4 +1,4 @@
-import {$window, $body, $scrolledElements} from '../modules/dev/_helpers';
+import {$window, $body, $header, $scrolledElements} from '../modules/dev/_helpers';
 import Popup from 'vintage-popup';
 
 export function initPopups() {
@@ -17,6 +17,8 @@ export function initPopups() {
     closeOnResize: true,
     lockScreen: false,
     afterClose: function (popup) {
+
+      $header.removeClass('is-overlapped');
       $systemItem.each(function () {
         $(this).removeClass('is-visible');
       });
@@ -27,10 +29,11 @@ export function initPopups() {
     $scrolledElements.stop().animate({scrollTop: 330}, 500, 'swing');
 
     setTimeout(function () {
+
       $systemItem.each(function () {
         $(this).addClass('is-visible');
       });
-
+      $header.addClass('is-overlapped');
       $popupInstance.open();
     }, 500);
   });

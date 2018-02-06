@@ -13,6 +13,7 @@
               multilanguagePage: true
             }, 'google_translate_element');
           }
+        style
         script(type='text/javascript', src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit')
 
       +e.UL.list.js-lang-list
@@ -38,28 +39,30 @@
           +e.UL.list-items
             +e.LI
               +e.A(href='#ru')
-                svg(class='icon flag_ru' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 9 6', width='900', height='600')
-                  rect(fill='#fff', width='9', height='3')
-                  rect(fill='#d52b1e', y='3', width='9', height='3')
-                  rect(fill='#0039a6', y='2', width='9', height='2')
+                +e.list-icon
+                  svg(class='flag_ru' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 9 6', width='900', height='600')
+                    rect(fill='#fff', width='9', height='3')
+                    rect(fill='#d52b1e', y='3', width='9', height='3')
+                    rect(fill='#0039a6', y='2', width='9', height='2')
+                +e.SPAN.list-text Русский
+
             +e.LI
               +e.A(href='#es')
-                svg(class='icon flag_est' xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='24', height='18', viewbox='0 0 24 18')
-                  defs
-                    path#4cuaa(d='M1488 46V36h24v10z')
-                    path#4cuac(d='M1488 34v-6h24v6z')
-                    path#4cuad(d='M1488 40v-6h24v6z')
-                    clippath#4cuab
-                      use(fill='#fff', xlink:href='#4cuaa')
-                  g
-                    g(transform='translate(-1488 -28)')
-                      g
-                        use(fill='#eee', xlink:href='#4cuaa')
-                        use(fill='#fff', fill-opacity='0', stroke='#dedede', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='50', stroke-width='2', clip-path='url("#4cuab")', xlink:href='#4cuaa')
-                      g
-                        use(fill='#3282c5', xlink:href='#4cuac')
-                      g
-                      use(fill='#1e0f00', xlink:href='#4cuad')
+                +e.list-icon
+                  +e.IMG(src='https://lipis.github.io/flag-icon-css/flags/4x3/es.svg' alt='image')
+                +e.SPAN.list-text Español
+
+            +e.LI
+              +e.A(href='#es')
+                +e.list-icon
+                  +e.IMG(src='https://lipis.github.io/flag-icon-css/flags/4x3/fi.svg' alt='image')
+                +e.SPAN.list-text Suomi
+
+            +e.LI
+              +e.A(href='#es')
+                +e.list-icon
+                  +e.IMG(src='https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg' alt='image')
+                +e.SPAN.list-text English
 
   +e.bottom
     +e.bottom-container.container
@@ -76,11 +79,11 @@
 
       +b.NAV.nav.header__nav
         +e.UL.list
-          li.is-active: a(href='#!') Home
+          li.is-active: a(href='home.html') Home
           li: a(href='#!') About us
-          li: a(href='#!') Private investors
-          li: a(href='#!') Institutional investors
-          li: a(href='#!') Market research
+          li: a(href='private-investor.html') Private investors
+          li: a(href='institutional-investors.html') Institutional investors
+          li: a(href='market-research.html') Market research
           li: a(href='#!') Get access
 
       +e.BUTTON.login(type='button')
