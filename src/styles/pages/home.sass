@@ -2,6 +2,12 @@
   position: relative
   min-height: 623px
   margin-top: 135px
+  background: url("../img/bg/screen_bg.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 50% 50%
+  @media screen and (min-width: 1921px)
+    background: url("../img/bg/screen_bg.jpg") no-repeat 50% 50%/contain, url("../img/bg/screen_bg.jpg") repeat-x 0 50%/contain
   &__container
     padding: 90px 15px
   &__inner
@@ -72,12 +78,8 @@
         top: -8px
         left: 0
       
-  &__bg
-    +coverdiv
-    +cover
-    z-index: -1
-    
 .chart
+  position: relative
   max-width: 1140px
   margin: -180px auto 0
   background: #fff
@@ -85,7 +87,6 @@
   &_entry-page
     margin: -170px auto 0
   &__inner
-    //padding: 20px
     +clr
   &__block
     float: left
@@ -677,10 +678,18 @@
         
 .result
   padding: 100px 0
-  background: url("../img/bg/result_bg.png") no-repeat 65% 149%/1793px 1196px
   &__container
     position: relative
     min-height: 1198px
+    &::after
+      position: absolute
+      top: 200px
+      left: -270px
+      z-index: -1
+      width: 1793px
+      height: 1196px
+      background: url("../img/bg/result_bg.png") no-repeat 65% 149%
+      content: ''
   &__item
     position: absolute
     padding-left: 40px
@@ -836,13 +845,13 @@
     position: relative
     float: left
     width: 50%
-    padding: 80px 20px 200px
+    padding: 70px 20px 200px
     text-align: center
     min-height: 490px
     &-text
       margin-bottom: 30px
     &-title
-      margin-bottom: 15px
+      margin-bottom: 7px
       color: #fafdff
       +f('ae-700', 78)
       font-weight: 700
@@ -855,7 +864,7 @@
     &-icon
       position: absolute
       left: 50%
-      bottom: 49px
+      bottom: 39px
       margin-left: -47px
   &__content
     float: left
